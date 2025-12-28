@@ -1,0 +1,903 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Part2BooleanCharString",
+            "request": "launch",
+            "mainClass": "section3.Part2BooleanCharString",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Part3OperatorsOperandsExpressions",
+            "request": "launch",
+            "mainClass": "section3.Part3OperatorsOperandsExpressions",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Part1NumericDataTypes",
+            "request": "launch",
+            "mainClass": "section3.Part1NumericDataTypes",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ConvenienceMethods",
+            "request": "launch",
+            "mainClass": "section14.MethodReferences.ConvenienceMethods",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.Challenges.MethodReferenceChallenge.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.MethodReferences.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.Challenges.LambdaExpressionChallenge.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.Challenges.LambdaMiniChallenges.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ConsumerInterface",
+            "request": "launch",
+            "mainClass": "section14.ConsumerInterface",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.LambdaExpressions.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section13.Challenges.LocalAndAnonymousClassChallenge.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "RunMethods",
+            "request": "launch",
+            "mainClass": "section13.NestedClasses.RunMethods",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section13.Challenges.PlaylistCreatorRevisited.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Store",
+            "request": "launch",
+            "mainClass": "section13.Challenges.BillBurgerRevisited.Store",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Store",
+            "request": "launch",
+            "mainClass": "section13.BillBurgerRevisited.Store",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Meal",
+            "request": "launch",
+            "mainClass": "section13.BillBurgerRevisited.Meal",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section13.NestedClasses.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.Challenges.IntegratingBoundedTypesAndComparators.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "WildCards",
+            "request": "launch",
+            "mainClass": "section12.GenericsAdvanced.WildCards",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.GenericsAdvanced.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "WildCards",
+            "request": "launch",
+            "mainClass": "section12.GenericsExtra.WildCards",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.GenericsExtra.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ComparableInterfaceRevisited",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.ComparableInterfaceRevisited",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ComparatorInterface",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.ComparatorInterface",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ComparableRevisited",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.ComparableRevisited",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.Challenges.GenericClassChallengeBuildingReusableStructures.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Generics",
+            "request": "launch",
+            "mainClass": "section12.GenericClasses.Generics",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.GenericClasses.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Challenges.MappableClasses.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Challenges.ISaveable.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Challenges.DataStructuresWithAbstractClasses.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "InterfacesJDK8And9Enhancements",
+            "request": "launch",
+            "mainClass": "section11.Interfaces.InterfacesJDK8And9Enhancements",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "InterfacesJDK8Enhancements",
+            "request": "launch",
+            "mainClass": "section11.Interfaces.InterfacesJDK8Enhancements",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "AbstractedReferenceTypes",
+            "request": "launch",
+            "mainClass": "section11.AbstractedReferenceTypes",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Interfaces.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Challenges.StoreFront.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.AbstractClasses.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "AbstractClasses",
+            "request": "launch",
+            "mainClass": "section11.AbstractClasses.AbstractClasses",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Enums",
+            "request": "launch",
+            "mainClass": "section10.Enums.Enums",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section10.Challenges.SimpleBankingApp.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section10.Challenges.BankingSystem.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section10.Challenges.PlaylistCreator.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Boxing",
+            "request": "launch",
+            "mainClass": "section10.AutoBoxing.Boxing",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Album",
+            "request": "launch",
+            "mainClass": "section10.Challenges.PlaylistCreator.Album",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TravelItenerary",
+            "request": "launch",
+            "mainClass": "section10.Challenges.TravelItenerary",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Iterators",
+            "request": "launch",
+            "mainClass": "section10.Lists.Iterators",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "LinkedLists",
+            "request": "launch",
+            "mainClass": "section10.Lists.LinkedLists",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section10.Challenges.MobilePhone.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "GroceryList",
+            "request": "launch",
+            "mainClass": "section10.Challenges.GroceryList.GroceryList",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section10.Challenges.GroceryList.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Lists",
+            "request": "launch",
+            "mainClass": "section10.Lists.Lists",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ArrayLists",
+            "request": "launch",
+            "mainClass": "section10.Lists.ArrayLists",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ArrayLIsts",
+            "request": "launch",
+            "mainClass": "section10.Lists.ArrayLIsts",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Collections",
+            "request": "launch",
+            "mainClass": "section10.Collections",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "NestedArrays",
+            "request": "launch",
+            "mainClass": "section9.Arrays.NestedArrays",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ReverseArray",
+            "request": "launch",
+            "mainClass": "section9.Challenges.ReverseArray",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "MinimumElement",
+            "request": "launch",
+            "mainClass": "section9.Challenges.MinimumElement",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StringMethodsAndBestPractices",
+            "request": "launch",
+            "mainClass": "section7.Strings.StringMethodsAndBestPractices",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "PublicStaticVoidMain",
+            "request": "launch",
+            "mainClass": "section9.Arrays.PublicStaticVoidMain",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ArraysReferences",
+            "request": "launch",
+            "mainClass": "section9.Arrays.ArraysReferences",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "SortArrays",
+            "request": "launch",
+            "mainClass": "section9.UtilsMadeByMe.SortArrays",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ArraysUtils",
+            "request": "launch",
+            "mainClass": "section9.UtilsMadeByMe.ArraysUtils",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "section9.UtilsMadeByMe.BinarySearch",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "SortedArray",
+            "request": "launch",
+            "mainClass": "section9.Challenges.SortedArray",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "section9.Arrays.BinarySearch",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "JavaUtilsArrays",
+            "request": "launch",
+            "mainClass": "section9.Arrays.JavaUtilsArrays",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section9.Arrays.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section9.Arrays.Basics.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Challenges.Restaurant.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Challenges.Polymorphism.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Challenges.Car.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Polymorphism.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Challenges.Printer.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Encapsulation.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Challenges.SmartKitchen.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StaticVsInstanceVariablesAndMethods",
+            "request": "launch",
+            "mainClass": "section7.StaticVsInstance.StaticVsInstanceVariablesAndMethods",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "References",
+            "request": "launch",
+            "mainClass": "section7.References.References",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ObjectClass",
+            "request": "launch",
+            "mainClass": "section7.ObjectClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Challenges.Circle.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StringBuilderClass",
+            "request": "launch",
+            "mainClass": "section7.StringBuilderClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StringMethodsAndBestPractices",
+            "request": "launch",
+            "mainClass": "section7.StringMethodsAndBestPractices",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TextBlocksAdvancedOutputFormating",
+            "request": "launch",
+            "mainClass": "section7.TextBlocksAdvancedOutputFormating",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "MainClass",
+            "request": "launch",
+            "mainClass": "section7.MainClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Challenges.WorkerHierarchy.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Inheritance.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Point",
+            "request": "launch",
+            "mainClass": "section7.Challenges.Point",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Record",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.Record",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "POJOs",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.POJOs",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StaticVsInstanceVariablesAndMethods",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.StaticVsInstanceVariablesAndMethods",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StaticVsInstanceVariables",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.StaticVsInstanceVariables",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "References",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.References",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Challenges.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.ObjectOrientedProgramming.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TheoryMain",
+            "request": "launch",
+            "mainClass": "section7.TheoryMain",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ChallengesMain",
+            "request": "launch",
+            "mainClass": "section7.ChallengesMain",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Main",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ChallengesReadingUserInput",
+            "request": "launch",
+            "mainClass": "section6.ChallengesReadingUserInput",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TheoryExceptionHandling",
+            "request": "launch",
+            "mainClass": "section6.TheoryExceptionHandling",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TheoryConsoleScannerInput",
+            "request": "launch",
+            "mainClass": "section6.TheoryConsoleScannerInput",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TheoryParsingValues",
+            "request": "launch",
+            "mainClass": "section6.TheoryParsingValues",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Challenges",
+            "request": "launch",
+            "mainClass": "section6.Challenges",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ChallengesWhileLoop",
+            "request": "launch",
+            "mainClass": "section6.ChallengesWhileLoop",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "WhileAndDoWhileLoop",
+            "request": "launch",
+            "mainClass": "section6.WhileAndDoWhileLoop",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ExercisesSandbox",
+            "request": "launch",
+            "mainClass": "ExercisesSandbox",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "FirstClass",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.FirstClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "IfThen",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.IfThen",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "LogicalOperators",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.LogicalOperators",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "OperatorPrecedenceExercise",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.OperatorPrecedenceExercise",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "SecondClass",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.SecondClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "TernaryOperator",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.TernaryOperator",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ThirdClass",
+            "request": "launch",
+            "mainClass": "section4.lesson33helloworld.ThirdClass",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "IfThenElse",
+            "request": "launch",
+            "mainClass": "section5.IfThenElse",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "KeywordsExpressions",
+            "request": "launch",
+            "mainClass": "section5.KeywordsExpressions",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "MethodChallenge",
+            "request": "launch",
+            "mainClass": "section5.MethodChallenge",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverloading",
+            "request": "launch",
+            "mainClass": "section5.MethodOverloading",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverloadingChallenge",
+            "request": "launch",
+            "mainClass": "section5.MethodOverloadingChallenge",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "Methods",
+            "request": "launch",
+            "mainClass": "section5.Methods",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "SecondsAndMinutsChallenge",
+            "request": "launch",
+            "mainClass": "section5.SecondsAndMinutsChallenge",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "StatementsWhitespaceIndentation",
+            "request": "launch",
+            "mainClass": "section5.StatementsWhitespaceIndentation",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "AdvancedSwitchChallenge",
+            "request": "launch",
+            "mainClass": "section6.AdvancedSwitchChallenge",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ForLoop",
+            "request": "launch",
+            "mainClass": "section6.ForLoop",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "ForLoopChallenges",
+            "request": "launch",
+            "mainClass": "section6.ForLoopChallenges",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "NatoPhoneticAlphabet",
+            "request": "launch",
+            "mainClass": "section6.NatoPhoneticAlphabet",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        },
+        {
+            "type": "java",
+            "name": "SwitchStatement",
+            "request": "launch",
+            "mainClass": "section6.SwitchStatement",
+            "projectName": "Java MasterClass 2025_c82f7ba7"
+        }
+    ]
+}
