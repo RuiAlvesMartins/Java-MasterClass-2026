@@ -14,7 +14,7 @@ public class TextBlocksAdvancedOutputFormating {
         //      \\      inserts backslash character;
         //      \u2022  inserts bullet point character;
 
-        String bulletIt = "Pring a Bulleted List:\n" + 
+        String bulletIt = "Print a Bulleted List:\n" + 
                 "\t\u2022 First Point\n" +
                 "\t\t\u2022 Sub Point";
         

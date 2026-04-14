@@ -21,7 +21,7 @@ public class Main {
         //  However this is not desirable, we don't want users to have access to the components of the SUPER OBJECT;
         thePC.getComputerCase().pressPowerButton();
         thePC.getMotherboard().loadProgram("Windows OS");
-        thePC.getMonitor().drawPixerAt(10, 10, "red");        
+        thePC.getMonitor().drawPixelAt(10, 10, "red");        
 
         //  this is a better way to boot up;
         thePC.powerUp();

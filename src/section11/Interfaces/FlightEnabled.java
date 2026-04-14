@@ -46,6 +46,7 @@ public interface FlightEnabled {
         //  it is common practice to write code like this or throw an exception;
         //  to confirm that default method is not implemented;
         //  classes that actually require this method can simply override it;
+        //  (see InterfacesJDK8And9Enhancements.java)
         System.out.println("transition not implemented on "
             + this.getClass().getName()
         );

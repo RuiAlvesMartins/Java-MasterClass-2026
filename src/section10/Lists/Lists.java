@@ -86,6 +86,7 @@ public class Lists {
 
         //  immutable!
         listOne.set(0, "Saturday");
+        listTwo.set(0, "Saturday");
 
     }
 

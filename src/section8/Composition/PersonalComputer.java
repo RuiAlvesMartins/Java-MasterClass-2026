@@ -1,4 +1,6 @@
 package section8.Composition;
+
+//  PersonalComputer IS A Product;
 public class PersonalComputer extends Product {
 
     //  PersonalComputer HAS A ComputerCase;
@@ -32,7 +34,7 @@ public class PersonalComputer extends Product {
 
     //  because users don't need to have access to this method, we leave it on private;
     private void drawLogo() {
-        monitor.drawPixerAt(1200, 50, "yellow");
+        monitor.drawPixelAt(1200, 50, "yellow");
         System.out.println("Logo printed!");
     }  
     

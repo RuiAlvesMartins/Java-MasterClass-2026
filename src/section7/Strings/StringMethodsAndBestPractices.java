@@ -62,7 +62,7 @@ public class StringMethodsAndBestPractices {
         System.out.printf("index of World = %d %n", helloWorld.indexOf("World"));
 
         System.out.printf("index of l = %d %n", helloWorld.indexOf('l'));
-        //  indexOf() returns an int representing the position of the argument in the string if found; returns -1 if not found; conts backwards
+        //  indexOf() returns an int representing the position of the argument in the string if found; returns -1 if not found; counts backwards
         System.out.printf("index of l = %d %n", helloWorld.lastIndexOf('l'));
 
         //  if you pass an int as a second argument, it will start counting from that position;

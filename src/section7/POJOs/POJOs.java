@@ -41,4 +41,14 @@ public class POJOs {
 
     }
 
+    //  POJOs: Plain Old Java Objects 
+    //  DTOs:  Data Transfer Object
+    //  DAOs:  Data Access Object
+    //  VOs:   Value Object
+    //  BOs:   Business Object
+    //  SOs:   Service Object / Layer
+    //  EOs:   Entity Object
+    //  PDCs:  Plain Data Carrier (Record)
+
+
 }

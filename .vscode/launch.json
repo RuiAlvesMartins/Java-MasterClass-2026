@@ -6,6 +6,293 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Collections",
+            "request": "launch",
+            "mainClass": "section15.JavaCollections.Collections",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ConvenienceMethods",
+            "request": "launch",
+            "mainClass": "section14.MethodReferences.ConvenienceMethods",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.LambdaExpressions.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ConsumerInterface",
+            "request": "launch",
+            "mainClass": "section14.LambdaExpressions.ConsumerInterface",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "LambdaExpressions",
+            "request": "launch",
+            "mainClass": "section14.LambdaExpressions.LambdaExpressions",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Store",
+            "request": "launch",
+            "mainClass": "section13.BillBurgerRevisited.Store",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "RunMethods",
+            "request": "launch",
+            "mainClass": "section13.NestedClasses.RunMethods",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section13.NestedClasses.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ComparatorInterface",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.ComparatorInterface",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ComparableInterfaceRevisited",
+            "request": "launch",
+            "mainClass": "section12.ComparableInterfaceRevisited.ComparableInterfaceRevisited",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.GenericsAdvanced.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "WildCards",
+            "request": "launch",
+            "mainClass": "section12.GenericsAdvanced.WildCards",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section12.GenericClasses.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "InterfacesJDK8And9Enhancements",
+            "request": "launch",
+            "mainClass": "section11.Interfaces.InterfacesJDK8And9Enhancements",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section11.Interfaces.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Enums",
+            "request": "launch",
+            "mainClass": "section10.Enums.Enums",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Iterators",
+            "request": "launch",
+            "mainClass": "section10.Lists.Iterators",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "LinkedLists",
+            "request": "launch",
+            "mainClass": "section10.Lists.LinkedLists",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ArrayLists",
+            "request": "launch",
+            "mainClass": "section10.Lists.ArrayLists",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Lists",
+            "request": "launch",
+            "mainClass": "section10.Lists.Lists",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Boxing",
+            "request": "launch",
+            "mainClass": "section10.AutoBoxing.Boxing",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "NestedArrays",
+            "request": "launch",
+            "mainClass": "section9.Arrays.NestedArrays",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "JavaUtilsArrays",
+            "request": "launch",
+            "mainClass": "section9.Arrays.JavaUtilsArrays",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ArraysReferences",
+            "request": "launch",
+            "mainClass": "section9.Arrays.ArraysReferences",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "VarArgs",
+            "request": "launch",
+            "mainClass": "section9.Arrays.VarArgs",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Polymorphism.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Encapsulation.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section8.Composition.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Record",
+            "request": "launch",
+            "mainClass": "section7.POJOs.Record",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ObjectClass",
+            "request": "launch",
+            "mainClass": "section7.Inheritance.ObjectClass",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section7.Inheritance.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "StringMethodsAndBestPractices",
+            "request": "launch",
+            "mainClass": "section7.Strings.StringMethodsAndBestPractices",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "StringBuilderClass",
+            "request": "launch",
+            "mainClass": "section7.Strings.StringBuilderClass",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "TextBlocksAdvancedOutputFormating",
+            "request": "launch",
+            "mainClass": "section7.Strings.TextBlocksAdvancedOutputFormating",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionHandling",
+            "request": "launch",
+            "mainClass": "section6.ExceptionHandlingAndUserInput.ExceptionHandling",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ConsoleScannerInput",
+            "request": "launch",
+            "mainClass": "section6.ExceptionHandlingAndUserInput.ConsoleScannerInput",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "ForLoop",
+            "request": "launch",
+            "mainClass": "section6.Loops.ForLoop",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "StatementsWhitespaceIndentation",
+            "request": "launch",
+            "mainClass": "section5.ExpressionsAndStatements.StatementsWhitespaceIndentation",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "IfThenElse",
+            "request": "launch",
+            "mainClass": "section5.ExpressionsAndStatements.IfThenElse",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "TernaryOperator",
+            "request": "launch",
+            "mainClass": "section4.Operators.TernaryOperator",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section14.Challenges.MethodReferenceChallenge.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Part2BooleanCharString",
             "request": "launch",
             "mainClass": "section3.Part2BooleanCharString",

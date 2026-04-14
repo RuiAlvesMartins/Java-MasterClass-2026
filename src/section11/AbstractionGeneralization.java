@@ -39,7 +39,7 @@ public class AbstractionGeneralization {
     //          //  abstract        //  method BODY always OMMITED; can only be declared on abstract classes or interfaces;
     //          //  static          //  called directly on the class instance; also known as a CLASS METHOD (vs. instance methods);
     //          //  final           //  cannot be OVERRIDEN by subclasses;
-    //          //  default         //  only applicable to interfaces;
+    //          //  default         //  only applicable to interfaces; see InterfacesJDK8And9Enhancements.java;
     //          //  native          //  body ommited, but differs from abstract; body will be implemented in platform dependent code (typically in C language); Very advanced topic;
     //          //  synchronized    //  manages how multiple threads access the code (see MULTI-THREADING sectionXX);
 

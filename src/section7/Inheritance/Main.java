@@ -2,7 +2,7 @@ package section7.Inheritance;
 
 public class Main {
 
-    //  INHERITANCE is a war to organize classes into a hierarchy;
+    //  INHERITANCE is a way to organize classes into a hierarchy;
     //  Lower SUB/CHILD classes EXTEND higher SUPER/PARENT classes;
     //  Extend allows them to INHERIT the fields and methods of the higher class;
     //  SUB classes have a IS A RELATIONSHIP with SUPER class;
@@ -19,7 +19,7 @@ public class Main {
 
         Dog yorkie = new Dog("Yorkie", 15);
         doAnimalStuff(yorkie, "fast");
-        Dog retriever = new Dog("Labrdor Retriever", 65, "Floppy", "Swimmer");
+        Dog retriever = new Dog("Labrador Retriever", 65, "Floppy", "Swimmer");
         doAnimalStuff(retriever, "slow");
 
         Dog wolf = new Dog("Wolf", 40);

@@ -1,6 +1,6 @@
 package section14.LambdaExpressions;
 
-//  This is a Functional Interface, as it has only one abstrct method;
+//  This is a Functional Interface, as it has only one abstract method;
 //  The anotation ensures this rule is respected, otherwise there will be an error at compile time;
 @FunctionalInterface
 public interface Operation<T> {

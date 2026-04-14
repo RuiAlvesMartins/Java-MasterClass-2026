@@ -129,7 +129,7 @@ public class ArrayLists {
         List<String> list = List.of(items);
 
         ArrayList<String> groceries = new ArrayList<>(list);
-        groceries.add("yogurt");
+        groceries.add("yoghurt");
 
         ArrayList<String> nextList = new ArrayList<>(
             List.of("pickles", "mustard", "cheese")

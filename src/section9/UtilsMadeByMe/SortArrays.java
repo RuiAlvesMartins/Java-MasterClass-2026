@@ -309,7 +309,7 @@ public class SortArrays {
 
     //  Bubble Sort for Object[];
     //  implements Comparator.compareTo();
-    //  can search String[], Integer[] Double[], and any other data type that implements Comparator;
+    //  can sort String[], Integer[] Double[], and any other data type that implements Comparator;
     //  WILL THROW ClassCastException if Object doesn't implement Comparable;
     public static void sort(Object[] array, boolean reverse) {
 

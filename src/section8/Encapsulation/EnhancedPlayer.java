@@ -6,6 +6,7 @@ public class EnhancedPlayer {
 
     //  (you are supposed to know how to refactor variables)
     //  (but VSC doesn't allow for it; Intelij does)
+    //  (actually, VSC does allow refactoring, just hit F2)
 
     //  fields are declared private (problem 1 and 2);
     private String name;

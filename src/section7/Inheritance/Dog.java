@@ -33,7 +33,7 @@ public class Dog extends Animal {
 
     public void makeNoise() {
 
-        //  subclasses can't access protected fields of super, but can access protected;
+        //  subclasses can't access private fields of super, but can access protected;
         if (type == "Wolf") {
             System.out.println("Ow Woooooooo!");
         }

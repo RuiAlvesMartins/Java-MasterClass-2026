@@ -37,7 +37,7 @@ class Monitor extends Product {
         this.resolution = resolution;
     }
 
-    public void drawPixerAt(int x, int y, String color) {
+    public void drawPixelAt(int x, int y, String color) {
         System.out.println(String.format("Drawing pixel at %d,%d in %s", x, y, color));
     }
 

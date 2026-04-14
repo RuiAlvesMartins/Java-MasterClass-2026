@@ -26,7 +26,7 @@ interface InterfaceDemo {}
     class YouTellMe<T> {
         //  <T> is a TYPE PARAMETER IDENTIFIER;
         //  It can be any other letter or word, as long as is inside <>;
-        //  privte field can be of whatever type passes for <T>;
+        //  private field can be of whatever type passes for <T>;
         private T field;
 
     }
