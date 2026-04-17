@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CollectionMethods",
+            "request": "launch",
+            "mainClass": "section15.JavaCollections.DeckOfCards.CollectionMethods",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.JavaCollections.DeckOfCards.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Collections",
             "request": "launch",
             "mainClass": "section15.JavaCollections.Collections",
