@@ -48,7 +48,7 @@ public class Sueca {
     }
 
 
-    public static void printDeck(String description, int rows) {
+    public static void printDeck(List<Card> deck, String description, int rows) {
 
         int cardsPerRow = deck.size()%rows == 0 ? deck.size()/rows : deck.size()/rows + 1;
         System.out.println("-".repeat(30));
@@ -73,7 +73,6 @@ public class Sueca {
     public static void sliceDeck(List<Card> deck) {
         int randomIndex = random.nextInt(1, deck.size() -1);
         Collections.rotate(deck, randomIndex);
-        // printDeck(deck, "Sliced Deck", 4);
     }
 
     public static void inputPlayers() {
@@ -108,12 +107,6 @@ public class Sueca {
     }
 
     public static void runGame() {
-
-        // List<Card> deck = getDeck();
-        // System.out.println(Arrays.toString(players));
-        // System.out.println("players.length = " + players.length);
-        // System.out.println(players[0]);
-        // System.out.println("player " + (players.length) + ": " + players[players.length - 1]);
 
         System.out.printf("%n%n%nSUECA%n");
         System.out.printf("%nWho is playing?%n");
@@ -151,20 +144,15 @@ public class Sueca {
 
         System.out.printf("%n%s shuffles the deck...%n", players[shuffleIndex].getName());
         shuffleDeck();
-        // printDeck("Shuffled Deck", 4);
+        // printDeck(deck, "Shuffled Deck", 4);
 
         System.out.printf("%n%s slices the deck...%n", players[indexDisplacer(shuffleIndex, 2)].getName());
-        // printDeck("Sliced Deck", 4);
+        // printDeck(deck, "Sliced Deck", 4);
 
         deal();
 
 
 
-
-        // System.out.printf("%n%s will deal the hands%n", players[dealerIndex].getName());
-        // System.out.println("From the top or from the bottom of the deck?");
-        // System.out.printf("%n%s draws first card from the top%n", players[dealerIndex].getName());
-        // System.out.println();
 
 
 
@@ -208,30 +196,27 @@ public class Sueca {
     static void dealTop() {
         //  remove card from top, deal from bottom;
         //  tableCard for dealer, deal 9 dealer, deal 10 right x3
-
-        printDeck("sliced", 4);
+        // printDeck(deck, "sliced", 4);
 
         //  TODO fix this
         Card tableCard = deck.get(0);
         // System.out.println("table card = " + tableCard);
+        System.out.printf("%n%s deals the first card from the top of the deck...%n", players[dealerIndex].getName());
 
         Card[] dealerDeck = new Card[10];
         dealerDeck[0] = tableCard;
-        // players[dealerIndex].setDeck(dealerDeck);
-        // System.out.println(Arrays.toString(players[dealerIndex].getDeck()));
+        // players[dealerIndex].setDeck(Arrays.asList(dealerDeck));
+        // printDeck(players[dealerIndex].getDeck(), players[dealerIndex].getName() + "'s deck:", 1);
+        System.out.printf("A %s is flipped on the table, for everyone to see%n", tableCard);
+        System.out.printf("%s will be the trump suit%n", tableCard.suit().getIcon());
 
         //  deal dealer's hand
         for(int i=0; i<9; i++) {
             dealerDeck[i+1] = deck.get(deck.size()-1 -i);
         }
-        players[dealerIndex].setDeck(dealerDeck);
-        // System.out.println(players[dealerIndex].getName() + "'s deck: " + Arrays.toString(players[dealerIndex].getDeck()));
-
-
-
-        for(int i=deck.size()-1; i>=0; i--) {
-            // System.out.println(deck.get(i));
-        }
+        players[dealerIndex].setDeck(Arrays.asList(dealerDeck));
+        System.out.printf("%n%s deals himself nine more cards%n", players[dealerIndex].getName());
+        // printDeck(players[dealerIndex].getDeck(), players[dealerIndex].getName() + "'s deck:", 1);
 
         //  deal other player's hands
         for(int j=0; j<3; j++) {
@@ -240,12 +225,12 @@ public class Sueca {
             for(int i=0; i<10; i++) {
                 playerDeck[i] = deck.get(deck.size()-1 -9 -j*playerDeck.length -i);
             }
-            players[playerIndex].setDeck(playerDeck);
-            // System.out.printf("%n%s deals %s ten cards%n", 
-            //             players[dealerIndex].getName(), 
-            //             players[playerIndex].getName()
-            // );
-            System.out.println(players[playerIndex].getName() + "'s deck: " + Arrays.toString(players[playerIndex].getDeck()));
+            players[playerIndex].setDeck(Arrays.asList(playerDeck));
+            System.out.printf("%n%s deals %s ten cards%n", 
+                        players[dealerIndex].getName(), 
+                        players[playerIndex].getName()
+            );
+            // printDeck(players[playerIndex].getDeck(), players[playerIndex].getName() + "'s deck:", 1);
         }
 
 
@@ -254,18 +239,19 @@ public class Sueca {
     static void dealBottom() {
         //  remove card from bottom, deal from top;
         //  tableCard for dealer, deal 10 right x3, final 9 cards for dealer
-
-
-        printDeck("Sliced", 4);
+        // printDeck(deck, "Sliced", 4);
 
         //  TODO fix this
         Card tableCard = deck.get(deck.size()-1);
         // System.out.println("table card = " + tableCard);
+        System.out.printf("%n%s deals the first card from the bottom of the deck...%n", players[dealerIndex].getName());
 
         Card[] dealerDeck = new Card[10];
         dealerDeck[0] = tableCard;
-        // players[dealerIndex].setDeck(dealerDeck);
-        // System.out.println(Arrays.toString(players[dealerIndex].getDeck()));
+        // players[dealerIndex].setDeck(Arrays.asList(dealerDeck));
+        // printDeck(players[dealerIndex].getDeck(), players[dealerIndex].getName() + "'s deck:", 1);
+        System.out.printf("A %s is flipped on the table, for everyone to see%n", tableCard);
+        System.out.printf("%s will be the trump suit%n", tableCard.suit().getIcon());
 
         //  deal other player's hands
         for(int j=0; j<3; j++) {
@@ -274,20 +260,21 @@ public class Sueca {
             for(int i=0; i<10; i++) {
                 playerDeck[i] = deck.get(j*playerDeck.length + i);
             }
-            players[playerIndex].setDeck(playerDeck);
+            players[playerIndex].setDeck(Arrays.asList(playerDeck));
             System.out.printf("%n%s deals %s ten cards%n", 
                         players[dealerIndex].getName(), 
                         players[playerIndex].getName()
             );
-            // System.out.println(players[playerIndex].getName() + "'s deck: " + Arrays.toString(players[playerIndex].getDeck()));
+            // printDeck(players[playerIndex].getDeck(), players[playerIndex].getName() + "'s deck:", 1);
         }
 
         //  deal dealer's hand
         for(int i=0; i<9; i++) {
             dealerDeck[i+1] = deck.get(30 + i);
         }
-        players[dealerIndex].setDeck(dealerDeck);
-        // System.out.println(players[dealerIndex].getName() + "'s deck: " + Arrays.toString(players[dealerIndex].getDeck()));
+        players[dealerIndex].setDeck(Arrays.asList(dealerDeck));
+        System.out.printf("%n%s deals himself the last nine cards%n", players[dealerIndex].getName());
+        // printDeck(players[dealerIndex].getDeck(), players[dealerIndex].getName() + "'s deck:", 1);
 
     }
 
