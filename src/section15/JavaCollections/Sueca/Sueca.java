@@ -278,5 +278,96 @@ public class Sueca {
 
     }
 
+    public static int isBiscaDry(List<Card> deck, int points) {
+        // int totalpoints = 0;
+        // totalpoints += deck.get(i).rank();
+        Card sevenClubs = null;
+        Card sevenSpade = null;
+        Card sevenDiamond = null;
+        Card sevenHeart = null;
+        //  this method identifies if bisca is dry;
+        //  detracts 10 points (the bisca value) per every dry bisca;
+
+        //  assigns all 7s found to a Card reference;
+        for(int i=0; i<deck.size(); i++) {
+            if (deck.get(i).face().equals("7")) {
+                if(deck.get(i).suit() == Card.Suit.CLUB) {
+                    sevenClubs = deck.get(i);
+                }
+                if(deck.get(i).suit() == Card.Suit.SPADE) {
+                    sevenSpade = deck.get(i);
+                }
+                if(deck.get(i).suit() == Card.Suit.DIAMOND) {
+                    sevenDiamond = deck.get(i);
+                }
+                if(deck.get(i).suit() == Card.Suit.HEART) {
+                    sevenHeart = deck.get(i);
+                }
+            }
+
+        }
+        //  if another card of the same suit is found, bisca is not seca!
+        //  TODO what to do in case of trump bisca is seca?
+        for(int j=0; j<deck.size(); j++) {
+            if (!deck.get(j).face().equals("7")) {
+                if (deck.get(j).suit() == Card.Suit.CLUB) {
+                    sevenClubs = null;
+                }
+                if (deck.get(j).suit() == Card.Suit.SPADE) {
+                    sevenSpade = null;
+                }
+                if (deck.get(j).suit() == Card.Suit.DIAMOND) {
+                    sevenDiamond = null;
+                }
+                if (deck.get(j).suit() == Card.Suit.HEART) {
+                    sevenHeart = null;
+                }
+            }
+        }
+        //  bisca is seca!
+        if (!(sevenClubs == null)) {
+            points -= 10;
+            System.out.printf("%n%s is dry!%n", sevenClubs);
+            System.out.println("-10 points");
+        }
+        if (!(sevenSpade == null)) {
+            points -= 10;
+            System.out.printf("%n%s is dry!%n", sevenSpade);
+            System.out.println("-10 points");
+        }
+        if (!(sevenDiamond == null)) {
+            points -= 10;
+            System.out.printf("%n%s is dry!%n", sevenDiamond);
+            System.out.println("-10 points");
+        }
+        if (!(sevenHeart == null)) {
+            points -= 10;
+            System.out.printf("%n%s is dry!%n", sevenHeart);
+            System.out.println("-10 points");
+        }
+
+        return points;
+    }
+
+    public static int assessScore(List<Card> deck) {
+        System.out.println("-".repeat(30));
+        int totalScore = 0;
+
+        //  goes across all of the deck, and sums the score per card;
+        for(int i=0; i<deck.size(); i++) {
+            totalScore += deck.get(i).rank();
+
+            if (deck.get(i).rank() != 0) {
+                System.out.printf("%-6s -->   + %2s points%n", deck.get(i), deck.get(i).rank());
+            }
+        }
+
+        //  detracts 10 points per every dry bisca;
+        totalScore = isBiscaDry(deck, totalScore);
+
+        System.out.println();
+        System.out.println("Total score = " + totalScore + " points");
+        return totalScore;
+    }
 
 }
