@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GameController",
+            "request": "launch",
+            "mainClass": "section15.JavaCollections.Games.GameController",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "section15.JavaCollections.Sueca.Main",
