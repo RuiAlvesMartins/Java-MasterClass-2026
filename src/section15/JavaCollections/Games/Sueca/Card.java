@@ -1,4 +1,4 @@
-package section15.JavaCollections.Sueca;
+package section15.JavaCollections.Games.Sueca;
 
 public record Card(Suit suit, String color, String face, int rank) {
 

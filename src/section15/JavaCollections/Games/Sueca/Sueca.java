@@ -1,4 +1,4 @@
-package section15.JavaCollections.Sueca;
+package section15.JavaCollections.Games.Sueca;
 
 import java.util.ArrayList;
 import java.util.Arrays;

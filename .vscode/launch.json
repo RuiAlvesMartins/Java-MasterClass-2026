@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Contact",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Contacts.Contact",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Contact",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Contact",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Hashing",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Hashing",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.JavaCollections.Games.Sueca.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "GameController",
             "request": "launch",
             "mainClass": "section15.JavaCollections.Games.GameController",

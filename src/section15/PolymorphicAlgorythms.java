@@ -1,4 +1,4 @@
-package section15.JavaCollections;
+package section15;
 
 public class PolymorphicAlgorythms {
     
