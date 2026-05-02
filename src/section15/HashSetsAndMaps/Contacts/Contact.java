@@ -1,9 +1,6 @@
 package section15.HashSetsAndMaps.Contacts;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Contact {
@@ -91,68 +88,21 @@ public class Contact {
 
 
 
-    public void mergeContactData(Contact contact) {
-        if (this.name.equals(contact.getName())) {
+    public Contact mergeContactData(Contact contact) {
+        Contact newContact = new Contact(this.name);
+        newContact.emails = new HashSet<>(this.emails);
+        newContact.phones = new HashSet<>(this.phones);
+
+        if (newContact.getName().equals(contact.getName())) {
             for (String email : contact.emails) {
-                this.emails.add(email);
+                newContact.emails.add(email);
             }
             for (String phone : contact.phones) {
-                this.phones.add(phone);
+                newContact.phones.add(phone);
             }
         }
-    }
 
-
-
-    public static void main(String[] args) {
-        
-        Contact johnDoe = new Contact("John Doe", 123_456_7890l);
-
-        johnDoe.phones.add("(321)654-0987");
-
-        // System.out.println(johnDoe);
-
-        String input1 = """
-                Charlie Brown, 3334445555
-                Maid Marion, 1234567890
-                Mickey Mouse, 9998887777
-                Mickey Mouse, 1247489758
-                Minnie Mouse, 4567805666
-                Robin Hood, 5647893000
-                Robin Hood, 7899028222
-                Lucy Van Pelt, 5642086852
-                Mickey Mouse, 9998887777
-                """;
-
-        String input2 = """
-                Mickey Mouse, mckmouse@gmail.com
-                Mickey Mouse, micky1@aws.com
-                Minnie Mouse, minnie@verizon.net
-                Robin Hood, rhood@gmail.com
-                Linus Van Pelt, lpvelt2015@gmail.com
-                Daffy Duck, daffy@google.com
-                """;
-
-        System.out.println();
-        List<Contact> contactsList = ContactData.getData(input1);
-        contactsList.addAll(ContactData.getData(input2));
-        int i = 1;
-        for (Contact contact : contactsList) {
-            for (Contact c : contactsList) {
-                contact.mergeContactData(c);
-            }
-
-            // System.out.println(String.format("%2s# %12s | %s", i++, contact.hashCode(), contact));
-        }
-
-        //  removing duplicates;
-        contactsList = new ArrayList<>(new LinkedHashSet<>(contactsList));
-        System.out.println(contactsList.getClass());
-
-        for (Contact contact : contactsList) {
-            System.out.println(String.format("%2s# %12s | %s", i++, contact.hashCode(), contact));
-        }
-
+        return newContact;
     }
 
 }

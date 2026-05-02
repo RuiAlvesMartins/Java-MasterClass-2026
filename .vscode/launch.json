@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ContactData",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Contacts.ContactData",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Contact",
             "request": "launch",
             "mainClass": "section15.HashSetsAndMaps.Contacts.Contact",
