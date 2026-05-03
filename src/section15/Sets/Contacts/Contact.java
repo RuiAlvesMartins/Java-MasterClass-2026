@@ -1,4 +1,4 @@
-package section15.HashSetsAndMaps.Contacts;
+package section15.Sets.Contacts;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -67,26 +67,67 @@ public class Contact {
         return contact;
     }
 
+    // //  an alternative .equals()
+    // @Override
+    // public boolean equals(Object obj) {
+    //     if (this == obj) return true;
+    //     if (obj == null || getClass() != obj.getClass()) return false;
+
+    //     //  Since obj has been confirmed to be of type Contact and not be null;
+    //     //  it can safely be cast to Contact;
+    //     Contact that = (Contact) obj;
+
+    //     return this.getName().equals(that.getName()) && 
+    //         Objects.equals(this.emails, that.emails) && 
+    //         Objects.equals(this.phones, that.phones);
+    // }
+
+    // //  an alternative .hashCode()
+    // @Override
+    // public int hashCode() {
+    //     //  Objects is a CLASS with auxiliary methods, like Collections;
+    //     return Objects.hash(this.getName(), this.emails, this.phones);
+    // }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
 
+        //  Since obj has been confirmed to be of type Contact and not be null;
+        //  it can safely be cast to Contact;
         Contact that = (Contact) obj;
 
-        if (!emails.equals(that.emails)) return false;
-        return phones.equals(that.phones);
+        return this.getName().equals(that.getName());
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + emails.hashCode();
-        result = 31 * result + phones.hashCode();
-        return result;
+        return 33 * this.getName().hashCode();
     }
 
 
+
+    public void addEmail(String companyName) {
+
+        String[] names = name.split(" ");
+        String email = "%c%s@%s.com".formatted(name.charAt(0), names[names.length-1], companyName.replaceAll(" ", "").toLowerCase());
+        if (!emails.add(email)) {
+            System.out.println(name + " already has " + email + " as an email!");
+        } else {
+            System.out.println(name + " now has " + email + " as an email.");
+        }
+
+    }
+
+    public void replaceEmailIfExists(String oldEmail, String newEmail) {
+
+        if (emails.contains(oldEmail)) {
+            emails.remove(oldEmail);
+            emails.add(newEmail);
+        }
+
+    }
 
     public Contact mergeContactData(Contact contact) {
         Contact newContact = new Contact(this.name);

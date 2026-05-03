@@ -17,7 +17,8 @@ public class BigONotation {
     //          or ideally stay the same O(1) (constant time);
 
     //  Constant Amortized Time Cost: O(n)*
-    //  In the majority of cases, cost is close to O(1) (constant time)
+    //  In the majority of cases, cost is close to O(1) (constant time);
+    //  O(1) on average over a sequence of operations;
 
 
 

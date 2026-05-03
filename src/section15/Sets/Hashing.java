@@ -1,4 +1,4 @@
-package section15.HashSetsAndMaps;
+package section15.Sets;
 
 import java.util.Arrays;
 import java.util.HashSet;

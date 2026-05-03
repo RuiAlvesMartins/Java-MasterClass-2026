@@ -1,7 +1,6 @@
-package section15.HashSetsAndMaps.Contacts;
+package section15.Sets.Contacts;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -132,54 +131,5 @@ public class ContactData {
 
         return mergedList;
     }
-
-    public static void printData(String header, Collection<Contact> contacts) {
-        System.out.println("-".repeat(30));
-        System.out.println(header);
-        System.out.println("-".repeat(30));
-        contacts.forEach(System.out::println);
-    }
-
-
-
-    public static void main(String[] args) {
-        
-        Contact johnDoe = new Contact("John Doe", 123_456_7890l);
-        johnDoe.phones.add("(321)654-0987");
-        System.out.println(johnDoe);
-
-        String input1 = """
-                Charlie Brown, 3334445555
-                Maid Marion, 1234567890
-                Mickey Mouse, 9998887777
-                Mickey Mouse, 1247489758
-                Minnie Mouse, 4567805666
-                Robin Hood, 5647893000
-                Robin Hood, 7899028222
-                Lucy Van Pelt, 5642086852
-                Mickey Mouse, 9998887777
-                """;
-
-        String input2 = """
-                Mickey Mouse, mckmouse@gmail.com
-                Mickey Mouse, micky1@aws.com
-                Minnie Mouse, minnie@verizon.net
-                Robin Hood, rhood@gmail.com
-                Linus Van Pelt, lpvelt2015@gmail.com
-                Daffy Duck, daffy@google.com
-                """;
-
-        System.out.println();
-        List<Contact> phonesList = ContactData.getData(input1);
-        List<Contact> emailsList = ContactData.getData(input2);
-
-        ContactData.printData("Phones List", phonesList);
-        ContactData.printData("Emails List", emailsList);
-        ContactData.printData("Phones List No Duplicates", ContactData.mergeContactData(phonesList));
-        ContactData.printData("Emails List No Duplicates", ContactData.mergeContactData(emailsList));
-        ContactData.printData("Data Merged", ContactData.mergeContactData(phonesList, emailsList));
-
-    }
-
 
 }

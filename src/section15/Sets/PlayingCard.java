@@ -1,4 +1,4 @@
-package section15.HashSetsAndMaps;
+package section15.Sets;
 
 public class PlayingCard {
     

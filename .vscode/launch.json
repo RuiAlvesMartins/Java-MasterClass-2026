@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.Sets.Task.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.Sets.Contacts.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.HashSetsAndMaps.Contacts.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "ContactData",
             "request": "launch",
             "mainClass": "section15.HashSetsAndMaps.Contacts.ContactData",
