@@ -16,19 +16,19 @@ public class Task implements Comparable<Task>{
 */
 
     enum Status {
-        NOT_ASSIGNED,
-        ASSIGNED,
-        IN_PROGRESS,
         COMPLETED,
-        CANCELED
+        CANCELED,
+        IN_PROGRESS,
+        ASSIGNED,
+        IN_QUEUE
     }
 
     enum Priority {
-        LOWEST,
-        LOW,
-        MEDIUM,
+        HIGHEST,
         HIGH,
-        HIGHEST
+        MEDIUM,
+        LOW,
+        LOWEST
     }
 
     private String assignee;
@@ -46,7 +46,7 @@ public class Task implements Comparable<Task>{
             case "IN PROGRESS" -> Status.IN_PROGRESS;
             case "COMPLETED" -> Status.COMPLETED;
             case "CANCELED" -> Status.CANCELED;
-            default -> Status.NOT_ASSIGNED;
+            default -> Status.IN_QUEUE;
         };
         this.priority = switch(priority.toUpperCase()) {
             case "LOWEST" -> Priority.LOWEST;
@@ -55,6 +55,17 @@ public class Task implements Comparable<Task>{
             case "HIGHEST" -> Priority.HIGHEST;
             default -> Priority.LOW;
         };
+    }
+
+    public Task(String assignee, String project, String description, String priority) {
+        this(assignee, project, description, 
+            assignee == null ? "in queue" : "assigned",
+            priority
+        );
+    }
+
+    public Task(String project, String description, String priority) {
+        this(null, project, description, priority);
     }
 
     public String getAssignee() {
@@ -91,7 +102,7 @@ public class Task implements Comparable<Task>{
             case "IN PROGRESS" -> Status.IN_PROGRESS;
             case "COMPLETED" -> Status.COMPLETED;
             case "CANCELED" -> Status.CANCELED;
-            default -> Status.NOT_ASSIGNED;
+            default -> Status.IN_QUEUE;
         };
     }
 
@@ -113,12 +124,14 @@ public class Task implements Comparable<Task>{
 
     @Override
     public String toString() {
-        return "| %-16s | %-24s | %-12s | %-8s |".formatted(project, description, status, priority);
+        return "| %-16s | %-24s | %-12s | %-12s | %-8s |".formatted(project, description, status, assignee, priority);
     }
 
     @Override
     public int hashCode() {
-        return 31 * (this.project.hashCode() + this.description.hashCode());
+        int result = this.getProject().hashCode();
+        result = 31 * result + getDescription().hashCode();
+        return result;
     }
 
     @Override
