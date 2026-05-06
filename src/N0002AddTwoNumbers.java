@@ -9,7 +9,7 @@ public class N0002AddTwoNumbers {
     }
 
     //todo remove static
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbersTakeOne(ListNode l1, ListNode l2) {
 
         int cycles = 1;
         ListNode ln1 = l1;
@@ -69,6 +69,92 @@ public class N0002AddTwoNumbers {
 
     }
 
+    public static ListNode addTwoNumbersTakeTwo(ListNode l1, ListNode l2) {
+        System.out.println("-".repeat(30));
+        return addTwoNumbersTakeTwo(l1, l2, 0);
+    }
+
+    private static ListNode addTwoNumbersTakeTwo(ListNode l1, ListNode l2, int carry) {
+
+        ListNode l3 = new ListNode();
+
+        if (l1 != null && l2 != null) {
+
+            int sum = l1.val + l2.val + carry;
+            carry = sum > 9 ? 1 : 0;
+            sum = sum > 9 ? sum - 10 : sum;
+
+            //  l1.next && l2.next NOT null;
+            if (l1.next != null && l2.next != null) {
+                l3 = new ListNode(sum, addTwoNumbersTakeTwo(l1.next, l2.next, carry));
+            }
+            //  l1.next null;
+            if (l1.next == null && l2.next != null) {
+                l3 = new ListNode(sum, addTwoNumbersTakeTwo(null, l2.next, carry));
+            }
+            //  l2.next null;
+            if (l1.next != null && l2.next == null) {
+                l3 = new ListNode(sum, addTwoNumbersTakeTwo(l1.next, null, carry));
+            }
+            //  l1.next && l2.next NULL;
+            if (l1.next == null && l2.next == null) {
+                if (carry > 0) {
+                    l3 = new ListNode(sum, new ListNode(carry));
+                    System.out.println(l3.next.val);
+                }
+                else {
+                    l3 = new ListNode(sum);
+                }
+                
+            }
+        }
+
+        if (l1 == null) {
+            
+            int sum = l2.val + carry;
+            carry = sum > 9 ? 1 : 0;
+            sum = sum > 9 ? sum - 10 : sum;
+
+            if (l2.next != null) {
+                l3 = new ListNode(sum, addTwoNumbersTakeTwo(null, l2.next, carry));
+            }
+            else {
+                if (carry > 0) {
+                    l3 = new ListNode(sum, new ListNode(carry));
+                    System.out.println(l3.next.val);
+                }
+                else {
+                    l3 = new ListNode(sum);
+                }
+            }
+
+        }
+
+        if (l2 == null) {
+            
+            int sum = l1.val + carry;
+            carry = sum > 9 ? 1 : 0;
+            sum = sum > 9 ? sum - 10 : sum;
+
+            if (l1.next != null) {
+                l3 = new ListNode(sum, addTwoNumbersTakeTwo(l1.next, null, carry));
+            }
+            else {
+                if (carry > 0) {
+                    l3 = new ListNode(sum, new ListNode(carry));
+                    System.out.println(l3.next.val);
+                }
+                else {
+                    l3 = new ListNode(sum);
+                }
+            }
+
+        }
+
+        System.out.println(l3.val);
+        return l3;
+    }
+
 
     public static void main(String[] args) {
         
@@ -80,13 +166,13 @@ public class N0002AddTwoNumbers {
         ListNode ln5 = new ListNode(6, ln4);
         ListNode ln6 = new ListNode(5, ln5);
 
-        addTwoNumbers(ln3, ln6);
+        // addTwoNumbersTakeTwo(ln3, ln6);
 
         ListNode ln7 = new ListNode(0);
 
         ListNode ln8 = new ListNode(0);
 
-        addTwoNumbers(ln7, ln8);
+        // addTwoNumbersTakeTwo(ln7, ln8);
 
         ListNode ln9 = new ListNode(9);
         ListNode ln10 = new ListNode(9, ln9);
@@ -101,7 +187,7 @@ public class N0002AddTwoNumbers {
         ListNode ln18 = new ListNode(9, ln17);
         ListNode ln19 = new ListNode(9, ln18);
 
-        addTwoNumbers(ln15, ln19);
+        addTwoNumbersTakeTwo(ln15, ln19);
 
         ListNode ln20 = new ListNode(9);
 
@@ -116,10 +202,11 @@ public class N0002AddTwoNumbers {
         ListNode ln29 = new ListNode(9, ln28);
         ListNode ln30 = new ListNode(1, ln29);
 
-        addTwoNumbers(ln20, ln30);
+        addTwoNumbersTakeTwo(ln20, ln30);
 
         // System.out.println("10 ^ 0 = " + (int) Math.pow(10, 0));
         // System.out.println("465 / 100 = " + 465/100);
+
 
     }
 
