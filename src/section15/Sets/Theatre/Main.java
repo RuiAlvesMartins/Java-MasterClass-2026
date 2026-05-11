@@ -74,7 +74,8 @@ public class Main {
 
         t.printSeatMap();
 
-        t.reserveSeat(12, 5, 'A', 'D');
+        // t.reserveSeat(12, 5, 'A', 'D');
+        t.reserveSeat(5, 5, 'A', 'A', 3, 8);
 
         t.printSeatMap();
 

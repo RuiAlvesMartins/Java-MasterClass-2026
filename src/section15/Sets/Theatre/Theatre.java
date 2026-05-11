@@ -154,9 +154,17 @@ public class Theatre {
     //      number of reservations requested;
     //      range of rows (e.g. A through C) for frontrow seats;
     //      range of contiguous seats (1 <= range of contiguous seats <= # seats per row);
-    public boolean reserveSeat(int totalSeats, int contiguousSeats, char startRow, char endRow) {
+    public boolean reserveSeat(int totalSeats, int contiguousSeats, char startRow, char endRow, int minSeat, int maxSeat) {
 
         //  validations
+        if (minSeat < 1 || minSeat > nSeatsPerRow) {
+            System.out.println("Argument out of bounds: minSeat");
+            return false;
+        }
+        if (maxSeat < minSeat || maxSeat > nSeatsPerRow) {
+            System.out.println("Argument out of bounds: maxSeat");
+            return false;
+        }
         if (totalSeats > nRows * nSeatsPerRow) {
             System.out.println("Argument out of bounds: can't book %d seats in a %d seat theatre!".formatted(totalSeats, nRows * nSeatsPerRow));
             return false;
@@ -167,6 +175,10 @@ public class Theatre {
         }
         if (contiguousSeats > nSeatsPerRow) {
             System.out.println("Argument out of bounds: can't book %d contigous seats. Rows have only %d seats!".formatted(contiguousSeats, nSeatsPerRow));
+            return false;
+        }
+        if (contiguousSeats > maxSeat - minSeat) {
+            System.out.println("Argument out of bounds: can't book %d contiguous seats in the %d-%d seat range!".formatted(contiguousSeats, minSeat, maxSeat));
             return false;
         }
         if (startRow - 'A' >= nRows || startRow - 'A' < 0) {
@@ -183,8 +195,8 @@ public class Theatre {
 
         for(int i=0; i<=endRow-startRow; i++) {
 
-            Seat s1 = new Seat((char) (startRow + i), 0);
-            Seat s2 = new Seat((char) (startRow + i + 1), 0);
+            Seat s1 = new Seat((char) (startRow + i), minSeat);
+            Seat s2 = new Seat((char) (startRow + i), maxSeat + 1);
 
             var row = seats.tailSet(s1).headSet(s2);
 
