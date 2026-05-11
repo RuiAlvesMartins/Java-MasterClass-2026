@@ -115,4 +115,37 @@ public class TaskData {
         System.out.println(lineSeparator);
     }
 
+    @SafeVarargs
+    static Set<Task> getUnion(Set<Task>... taskSets) {
+
+        Set<Task> union = new HashSet<>();
+
+        for (Set<Task> taskSet : taskSets) {
+            union.addAll(taskSet);
+        }
+
+        return union;
+
+    }
+
+    static Set<Task> getIntersect(Set<Task> setA, Set<Task> setB) {
+
+        Set<Task> AintersectB = new HashSet<>(setA);
+
+        AintersectB.retainAll(setB);
+
+        return AintersectB;
+
+    }
+
+    static Set<Task> getDifference(Set<Task> setA, Set<Task> setB) {
+
+        Set<Task> AminusB = new HashSet<>(setA);
+
+        AminusB.removeAll(setB);
+
+        return AminusB;
+
+    }
+
 }

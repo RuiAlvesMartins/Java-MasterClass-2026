@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section15.Sets.Theatre.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "TreeSetMain",
+            "request": "launch",
+            "mainClass": "section15.Sets.TreeSetMain",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "N0002AddTwoNumbers",
             "request": "launch",
             "mainClass": "N0002AddTwoNumbers",

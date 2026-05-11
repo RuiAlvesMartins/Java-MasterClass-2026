@@ -39,10 +39,26 @@ public class SetInterface {
 
 
     //  Set MATH OPERATIONS
-    //  Union
-    //  Intersection
-    //  Difference
-    //  Symmetric Difference
-    //  TODO
+    //  Union;
+    //  Intersection;
+    //  Difference;
+    //  Symmetric Difference;
+
+
+
+    //  LINKED HASHSET
+    //  Extends HashSet;
+    //  Is ORDERED (insertion order); 
+
+    //  TREESET
+    //  Uses a Red Black Tree data structure, a derivative of a Binary Search Tree;
+    //  Is ORDERED (natural order or by specifiing the sort on the creation);
+    //  O(log(n)) for .add(), .remove(), .contains();
+    //  Implements NavigableSet -> SortedSet -> Set -> Collection;
+    //  SortedSet has .first(), .last(), .headSet(), .tailSet(), .comparator();
+    //  NavigableSet has .ceiling(), .floor(), .higher(), .lower(), .descendingSet(), etc...
+    //  Elements that don't implement Comparable can be passed to a TreeSet, but a Comparator must also be provided;
+    //  This is an ordered structure after all;
+    //  Primitives or other elements with a natural order are exempt from this rule;
 
 }
