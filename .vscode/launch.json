@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MapViewsMain",
+            "request": "launch",
+            "mainClass": "section15.Maps.MapViewsMain",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "MapMain",
+            "request": "launch",
+            "mainClass": "section15.Maps.MapMain",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "TreeSetMain",
+            "request": "launch",
+            "mainClass": "section15.Sets.Theatre.TreeSetMain",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "section15.Sets.Theatre.Main",
