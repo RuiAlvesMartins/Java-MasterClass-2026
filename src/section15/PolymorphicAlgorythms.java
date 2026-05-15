@@ -9,6 +9,8 @@ public class PolymorphicAlgorythms {
     //  As of JDK-8, these methods can now be found on the interfaces themselves, as static or default;
     //  However, some are still reside in java.util.Collections;
 
+    //todo
+
     public static void main(String[] args) {
         
 
