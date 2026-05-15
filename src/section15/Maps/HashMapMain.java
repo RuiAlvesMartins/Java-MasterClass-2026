@@ -2,6 +2,8 @@ package section15.Maps;
 
 public class HashMapMain {
     
+
+
     //  HASHMAP
 
     //  Implements Map<K,V> interface;
@@ -10,5 +12,25 @@ public class HashMapMain {
     //  For this reason, a HashMap IS NOT ORDERED;
     //  HashMap.Node<K,V> is a static class nested inside of HashMap;
     //  HashMap.Node<K,V> implements Map.Entry<K,V> interface (nested in Map);
+
+
+
+    //  LINKEDHASHMAP
+
+    //  Keys follow INSERTION ORDER; 
+
+
+
+    //  TREEMAP
+
+    //  Keys are SORTED, so they either:
+    //          implement COMPARABLE;
+    //          are initialized with a COMPARATOR;
+    //  Views:
+    //          .entrySet(); .keySet(); .values();
+    //          .descendingKeySet(); .descendingKeyMap();
+    //          .headMap(k); .headMap(k, inclusive);
+    //          .tailMap(k); .tailMap(k, inclusive);
+    //          .subMap(k, k); .subMap(k, inclusive, k, inclusive);
 
 }

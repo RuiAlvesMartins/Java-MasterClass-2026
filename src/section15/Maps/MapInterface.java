@@ -25,7 +25,7 @@ public class MapInterface {
     //          SortedMap (interface);
     //          HashMap (unordered);
     //          LinkedHashMap (insertion order);
-    //          TreeMap (sorted);
+    //          TreeMap (sorted by keys);
 
     //  Map.Entry<K, V> is a nested interface in Map;
     //  It represents a key-value pair;
