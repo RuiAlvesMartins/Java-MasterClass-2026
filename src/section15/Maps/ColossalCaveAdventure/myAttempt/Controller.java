@@ -1,4 +1,4 @@
-package section15.Maps.ColossalCaveAdventure;
+package section15.Maps.ColossalCaveAdventure.myAttempt;
 
 public class Controller {
     

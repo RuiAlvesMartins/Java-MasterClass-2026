@@ -1,4 +1,4 @@
-package section15.Maps.ColossalCaveAdventure;
+package section15.Maps.ColossalCaveAdventure.myAttempt;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.NavigableSet;
 import java.util.TreeMap;
@@ -20,27 +22,26 @@ public class Store {
     //  Map<sku, InvItem>
     private NavigableMap<Integer, InventoryItem> inventory;
     private NavigableSet<Cart> carts;       //  should be sorted by date!
-    private NavigableMap<Category, NavigableSet<InventoryItem>> aisleInventory;
+    private Map<Category, NavigableMap<String, InventoryItem>> aisleInventory;
 
     public Store() {
         this.inventory = new TreeMap<>();
         this.carts = new TreeSet<>();
-        this.aisleInventory = new TreeMap<>();
-    }
-
-
-    
-    
+        this.aisleInventory = new EnumMap<>(Category.class);
+    }    
 
     public NavigableMap<Integer, InventoryItem> getInventory() {
         return inventory;
     }
 
-
-
     public NavigableSet<Cart> getCarts() {
         return carts;
     }
+
+    public Map<Category, NavigableMap<String, InventoryItem>> getAisleInventory() {
+        return aisleInventory;
+    }
+
 
 
     //todo manageStoreCarts
@@ -48,7 +49,6 @@ public class Store {
 
     //checkOutCart
     public boolean checkOutCart(Cart cart) {
-        //todo test
         Cart cartObj = carts.ceiling(cart);
 
         if (cartObj != null) {
@@ -69,6 +69,9 @@ public class Store {
 
     //abandonCarts     (if cartDate != currentDate -> abandon cart)
     public boolean abandonCarts() {
+        //  instead of using iterator, you could have done this with .headSet() and .tailSet()
+        //  it would have better performance;
+        //  but using iterator is a valuable lesson;
         boolean modified = false;
 
         //TODO: IMPORTANT - DO NOT REMOVE ITEMS FROM LIST WILST ITERATING THROUGH IT!
@@ -108,6 +111,7 @@ public class Store {
     public void listProductsByCategory(Category... categories) {
 
         var sortedCategories = new ArrayList<>(Arrays.asList(categories));
+        //  sorting varargs by the ordianal order on enum;
         Collections.sort(sortedCategories);
 
         String header = "%-12s %-11s  %-12s %-7s  %-12s %-6s %-6s"
@@ -137,6 +141,36 @@ public class Store {
 
         System.out.println("-".repeat(75));
         System.out.println();
+
+    }
+
+    void stockStore() {
+
+        for (int sku : inventory.keySet()) {
+            
+            InventoryItem item = inventory.get(sku);
+            item.placeInventoryOrder();
+
+        }
+
+    }
+
+    void stockAisles() {
+
+        for (InventoryItem item : inventory.values()) {
+            
+            Category aisle = item.getProduct().getCategory();
+            var aisleItems = aisleInventory.get(aisle);
+
+            //  aisle values only get initialized if products are going to be inserted;
+            if (aisleItems == null) {
+                aisleItems = new TreeMap<>();
+            }
+
+            aisleItems.put(item.getProduct().getName(), item);
+            aisleInventory.putIfAbsent(aisle, aisleItems);
+
+        }
 
     }
 
