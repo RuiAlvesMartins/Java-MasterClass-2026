@@ -135,6 +135,8 @@ public class AdventureGame {
             move(direction);
         }
 
+        scn.close();
+
     }
 
 }

@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainRecord",
+            "request": "launch",
+            "mainClass": "section16.Mutability.ImmutableClasses.MainRecord",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section16.Mutability.ImmutableClasses.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "MainMailer",
+            "request": "launch",
+            "mainClass": "section16.Mutability.AnotherDifferentFolder.MainMailer",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Logger",
+            "request": "launch",
+            "mainClass": "section16.Mutability.AnotherDifferentFolder.Logger",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section16.Mutability.AnotherDifferentFolder.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section16.Mutability.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "section16.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "section15.Maps.ColossalCaveAdventure.timsSolution.Main",
