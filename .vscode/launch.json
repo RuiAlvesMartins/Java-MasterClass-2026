@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "gitIgnoreTest.Main",
+            "projectName": "Java-MasterClass-2026_9a19a2d3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "section16.Mutability.ImmutableCollections.Main",
             "projectName": "Java-MasterClass-2026_9a19a2d3"
         },
