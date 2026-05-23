@@ -29,8 +29,13 @@ public class MainRecord {
 
         johnsKids[0] = new PersonRecord("Ann", "04/04/1936");
         System.out.println(john);
-        //  this still mutates the STATE
-        //  sollution next video
+        //  this still mutates the STATE though;
+        //  Solution?       see PersonImmutable.java
+
+
+
+        //  RECORDS are IMMUTABLE in theory
+        //  but not guaranteed in practice
 
     }
 

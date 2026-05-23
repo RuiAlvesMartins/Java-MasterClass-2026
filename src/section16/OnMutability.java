@@ -1,6 +1,6 @@
 package section16;
 
-public class Mutability {
+public class OnMutability {
     
     //  Mutability
 
