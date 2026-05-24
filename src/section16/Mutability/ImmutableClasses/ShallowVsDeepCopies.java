@@ -2,9 +2,9 @@ package section16.Mutability.ImmutableClasses;
 
 import java.util.Arrays;
 
-record Person(String name, String dob, Person[] kids) {
+record PersonDemo(String name, String dob, PersonDemo[] kids) {
 
-    public Person(Person p) {
+    public PersonDemo(PersonDemo p) {
         this(p.name, p.dob, p.kids == null ? null : Arrays.copyOf(p.kids, p.kids.length));
     }
 
@@ -45,17 +45,17 @@ public class ShallowVsDeepCopies {
 
     public static void main(String[] args) {
         
-        Person joe = new Person("Joe", "01/01/1961", null);
-        Person jim = new Person("Jim", "02/02/1962", null);
-        Person jack = new Person("Jack", "03/03/1963", new Person[]{joe, jim});
-        Person jane = new Person("Jane", "04/04/1964", null);
-        Person jill = new Person("Jill", "05/05/1965", new Person[]{joe, jim});
+        PersonDemo joe = new PersonDemo("Joe", "01/01/1961", null);
+        PersonDemo jim = new PersonDemo("Jim", "02/02/1962", null);
+        PersonDemo jack = new PersonDemo("Jack", "03/03/1963", new PersonDemo[]{joe, jim});
+        PersonDemo jane = new PersonDemo("Jane", "04/04/1964", null);
+        PersonDemo jill = new PersonDemo("Jill", "05/05/1965", new PersonDemo[]{joe, jim});
 
-        Person[] persons = {joe, jim, jack, jane, jill};
+        PersonDemo[] persons = {joe, jim, jack, jane, jill};
         //  Arrays.copyOf()     makes a SHALLOW copy;  
         //  but because there is no way to mutate fields on Person record;
         //  there is also no need for a deep copy;
-        Person[] personsCopy = Arrays.copyOf(persons, persons.length);
+        PersonDemo[] personsCopy = Arrays.copyOf(persons, persons.length);
 
         //  this will mutate the code;
         //  because persons and personsCopy are backed by the same elements!
@@ -84,17 +84,17 @@ public class ShallowVsDeepCopies {
         //  this is needed to reset changes;
         jillsKids[1] = jim; 
         //  this will instantiate a new array, to test deep copy;
-        personsCopy = new Person[5];
+        personsCopy = new PersonDemo[5];
 
         //  populating the deep copy;
         for (int i=0; i<persons.length; i++) {
-            Person current = persons[i];
+            PersonDemo current = persons[i];
             //  this will make only a shallow copy of the kids array;
             //  but it is fine for our purposes right now;
             var kids = current.kids() == null ? null : 
                     Arrays.copyOf(current.kids(), current.kids().length);
             //  a deep copy instantiates copies of the original elements!
-            personsCopy[i] = new Person(current.name(), current.dob(), kids);
+            personsCopy[i] = new PersonDemo(current.name(), current.dob(), kids);
         }
         //  alternatively, it is possible to populate the deep copy array with the overloaded constructor returning a copy of Person:
         // Arrays.setAll(personsCopy, i -> new Person(persons[i]));
