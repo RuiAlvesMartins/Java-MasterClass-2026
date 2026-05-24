@@ -1,4 +1,4 @@
-package section16.Challenges.BankImmutable;
+package section16.Challenges.BankImmutablePartOne;
 
 public final class BankAccount {
 

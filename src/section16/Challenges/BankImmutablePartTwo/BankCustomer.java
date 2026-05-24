@@ -1,15 +1,19 @@
-package section16.Challenges.BankImmutable;
+package section16.Challenges.BankImmutablePartTwo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import section16.Challenges.BankImmutablePartTwo.BankAccount.AccountType;
+
+//todo  code in other classes cannot instantiate BankCostumer
 public class BankCustomer {
     
     //  name;
     //  id;
     //  collection<BankAccount>;
     private final String name;
+    //todo customerId should be a 15 digit string
     private static int idInitializer = 999_999_999;
     private final int id;
     //  should this be final?
@@ -38,6 +42,7 @@ public class BankCustomer {
     }
 
     public List<BankAccount> getAccounts() {
+        //todo how safe is this?
         List<BankAccount> accountsCopy = List.copyOf(accounts);
         return accountsCopy;
     }
@@ -56,6 +61,13 @@ public class BankCustomer {
 
         this.accounts.add(account);
         return true;
+    }
+
+    //todo
+    //should it be final?
+    //assume customers have only 1 account per accountType (e.g. 1 checking, 1 savings, 1 business)
+    public BankAccount getAccount(AccountType type) {
+        return null;
     }
 
 }

@@ -1,8 +1,8 @@
-package section16.Challenges.BankImmutable;
+package section16.Challenges.BankImmutablePartTwo;
 
 import java.util.List;
 
-import section16.Challenges.BankImmutable.BankAccount.AccountType;
+import section16.Challenges.BankImmutablePartTwo.BankAccount.AccountType;
 
 //  Cannot extend BankAccount, because it is final!
 // class FakeBankAccount extends BankAccount {
