@@ -6,7 +6,7 @@ package section16.Challenges.BankImmutablePartTwo;
     //  Because of two way communication, it needs getters and setters!
     //  It also usually features an all args constructor for ease of use;
 
-final class TransactionDTO {
+public final class TransactionDTO {
     
     //  Do NOT initialize IDs in a DTO!!!
     // private static long idInitializer = 100_000_000_000_001l;
@@ -36,6 +36,14 @@ final class TransactionDTO {
         this.transactionAmount = transactionAmount;
     }
 
+    //  copy constructor
+    public TransactionDTO(TransactionDTO original) {
+        this.routingNumber = original.getRoutingNumber();
+        this.customerId = original.getCustomerId();
+        this.transactionId = original.getTransactionId();
+        this.transactionAmount = original.getTransactionAmount();
+    }
+
     //setters
     void setRoutingNumber(int routingNumber) {
         this.routingNumber = routingNumber;
@@ -51,24 +59,24 @@ final class TransactionDTO {
     }
 
     //getters
-    int getRoutingNumber() {
+    public int getRoutingNumber() {
         return routingNumber;
     }
-    String getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
-    long getTransactionId() {
+    public long getTransactionId() {
         return transactionId;
     }
-    double getTransactionAmount() {
+    public double getTransactionAmount() {
         return transactionAmount;
     }
 
-    // @Override
-    // public String toString() {
-    //     return "TransactionDTO [routingNumber=" + routingNumber + ", customerId=" + customerId + ", transactionId="
-    //             + transactionId + ", transactionAmount=" + transactionAmount + "]";
-    // }
+    @Override
+    public String toString() {
+        return "TransactionDTO [routingNumber=" + routingNumber + ", customerId=" + customerId + ", transactionId="
+                + transactionId + ", transactionAmount=" + transactionAmount + "]";
+    }
 
 
     

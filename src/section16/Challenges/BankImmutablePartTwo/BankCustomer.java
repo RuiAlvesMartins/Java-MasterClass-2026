@@ -30,6 +30,13 @@ public final class BankCustomer {
         // this.accounts = new ArrayList<>(collectionArg);
     }
 
+    //  copy constructor
+    public BankCustomer(BankCustomer original) {
+        this.name = original.getName();
+        this.id = original.getId();
+        this.accounts = original.getAccounts();
+    }
+
     //  code in other classes cannot instantiate BankCostumer!
     //  customer factory method;
     //  will instantiate a new customer if, and only if, he opens a cheking or savings account;
@@ -72,9 +79,16 @@ public final class BankCustomer {
     }
 
     public List<BankAccount> getAccounts() {
-        //todo how safe is this?
-        //  should be public?
-        List<BankAccount> accountsCopy = List.copyOf(accounts);
+        //  SHALLOW copy:
+        // return List.copyOf(accounts);
+
+        //  DEEP copy:
+        List<BankAccount> accountsCopy = new ArrayList<>();
+        for (BankAccount account : accounts) {
+            BankAccount accountCopy = new BankAccount(account);
+            accountsCopy.add(accountCopy);
+        }
+
         return accountsCopy;
     }
 
@@ -95,12 +109,13 @@ public final class BankCustomer {
     }
 
     //todo
-    //should it be final?
-    //should we return a copy of the account?
     //assume customers have only 1 account per accountType (e.g. 1 checking, 1 savings, 1 business)
-    public BankAccount getAccount(AccountType type) {
+    //  this has to return an original instance, instead of a copy, for use in Bank.java;
+    //  it CANNOT return a COPY!
+    public final BankAccount getAccount(AccountType type) {
         for (BankAccount account : accounts) {
             if (account.getType() == type) {
+                // return new BankAccount(account);
                 return account;
             }
         }

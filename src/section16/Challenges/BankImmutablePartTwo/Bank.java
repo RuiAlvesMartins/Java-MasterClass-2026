@@ -23,12 +23,27 @@ public class Bank {
     }
 
     public Map<String, BankCustomer> getCustomers() {
-        //todo this should return a DEEP copy;
-        return customers;
-    }
+        // Map<String, BankCustomer> customersCopy = new HashMap<>(customers);
+        Map<String, BankCustomer> customersCopy = new HashMap<>();
 
+        for (BankCustomer customer : customers.values()) {
+
+            BankCustomer customerCopy = new BankCustomer(customer);
+
+            customersCopy.put(customerCopy.getId(), customerCopy);
+
+        }
+
+        return customersCopy;
+    }
+    
+    //todo
+    //  it CANNOT return a COPY!
     public BankCustomer getCustomer(String id) {
-        //todo this should return a copy;
+        // if (customers.get(id) != null) {
+        //     return new BankCustomer(customers.get(id));
+        // }
+        // return null;
         return customers.get(id);
     }
 

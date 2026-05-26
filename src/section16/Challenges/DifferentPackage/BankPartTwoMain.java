@@ -1,7 +1,12 @@
 package section16.Challenges.DifferentPackage;
 
 import section16.Challenges.BankImmutablePartTwo.BankCustomer;
+import section16.Challenges.BankImmutablePartTwo.TransactionDTO;
 import section16.Challenges.BankImmutablePartTwo.BankAccount;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import section16.Challenges.BankImmutablePartTwo.Bank;
 import section16.Challenges.BankImmutablePartTwo.BankAccount.AccountType;
 
@@ -44,6 +49,37 @@ public class BankPartTwoMain {
         System.out.println();
         System.out.println(zeNinguem);
 
+
+
+        //  Now we try to break the code
+        System.out.printf("%n%n%n%n");
+
+        //  getters are returning defensive copies;
+        //  each time you make a transaction, you have to atualize the references;
+        //  or they will point to a previous state in time;
+        zeChecking = cgd.getCustomer(zeNinguem.getId()).getAccount(AccountType.CHECKING);
+
+        var zeTransactions = zeChecking.getTransactions().values();
+        List<TransactionDTO> transList = new ArrayList<>(zeTransactions);
+        
+        //  can get to a TransactionDTO object
+        System.out.println(transList.get(0));
+        System.out.println(transList.size());
+        transList.forEach(System.out::println);
+
+        transList.get(0).getRoutingNumber();
+        transList.get(0).getCustomerId();
+        transList.get(0).getTransactionAmount();
+        transList.get(0).getTransactionId();
+        transList.get(0).toString();
+
+        //  cannot access setters on TransactionDTO from outside the package!
+        // transList.get(0).setTransactionAmount(1_000_000_000); 
+   
+        
+
+
+        
 
     }
 

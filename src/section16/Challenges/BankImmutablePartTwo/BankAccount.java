@@ -1,7 +1,6 @@
 package section16.Challenges.BankImmutablePartTwo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +21,7 @@ public final class BankAccount {
     private double balance;
     private final Map<Long, TransactionDTO> transactions;
 
-    protected BankAccount(AccountType type, double initialAmount) {
+    BankAccount(AccountType type, double initialAmount) {
         //  defensive copies needed?
         this.type = type;
         this.id = idInitializer++;
@@ -31,8 +30,12 @@ public final class BankAccount {
         this.transactions = new LinkedHashMap<>();
     }
 
-    protected BankAccount(AccountType type) {
-        this(type, 0);
+    //  copy constructor;
+    public BankAccount(BankAccount original) {
+        this.type = original.getType();
+        this.id = original.getId();
+        this.balance = original.getBalance();
+        this.transactions = original.getTransactions();
     }
 
     //  no setters!
@@ -55,9 +58,21 @@ public final class BankAccount {
     }
 
     public Map<Long, TransactionDTO> getTransactions() {
-        //todo return a DEEP copy! 
-        //  should it be public?
-        return transactions;
+        //  SHALLOW copy:
+        // return new LinkedHashMap<>(transactions);
+
+        //  DEEP copy:
+        Map<Long, TransactionDTO> transactionsCopy = new LinkedHashMap<>();
+
+        for (TransactionDTO t : transactions.values()) {
+
+            TransactionDTO tCopy = new TransactionDTO(t);
+
+            transactionsCopy.put(tCopy.getTransactionId(), tCopy);
+        }
+
+        return transactionsCopy;
+
     }
 
     @Override
@@ -91,7 +106,7 @@ public final class BankAccount {
     //  negative amount is withdrawal;
     //  positive amount is deposit;
     //  don't let balance go < 0 !!!!
-    boolean commitTransaction(int routingNumber, long transactionID, String customerID, double amount) {
+    final boolean commitTransaction(int routingNumber, long transactionID, String customerID, double amount) {
         
         boolean validTransaction = amount < 0 ? withdraw(amount) : deposit(amount);
 
@@ -110,7 +125,7 @@ public final class BankAccount {
         //  reversed (most recent first)
 
         List<TransactionDTO> transactionList = new ArrayList<>(transactions.values());
-        Collections.reverse(transactionList);
+        // Collections.reverse(transactionList);
 
         System.out.println("-".repeat(60));
         System.out.println(this.toString());
