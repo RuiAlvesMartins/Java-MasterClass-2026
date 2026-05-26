@@ -1,10 +1,14 @@
 package section16.Challenges.BankImmutablePartTwo;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public final class BankAccount {
 
-    enum AccountType {
+    public enum AccountType {
         CHECKING,
         SAVINGS,
         BUSINESS
@@ -13,21 +17,22 @@ public final class BankAccount {
     //  fields are private;
     //  fields are final, where possible;
     private final AccountType type;
-    private static int idInitializer = 999_999_999;
-    private final int id;
+    private static long idInitializer = 1_000_000_001l;
+    private final long id;
     private double balance;
-    //todo
-    private Map<Long, TransactionDTO> transactions;
+    private final Map<Long, TransactionDTO> transactions;
 
     protected BankAccount(AccountType type, double initialAmount) {
         //  defensive copies needed?
         this.type = type;
         this.id = idInitializer++;
-        this.balance = initialAmount < 50 ? 50 : initialAmount;
+        this.balance = initialAmount < 0 ? 0 : initialAmount;
+        //  LinkedHashMap() is ordered by insertion order, which is good enough here;
+        this.transactions = new LinkedHashMap<>();
     }
 
-    public BankAccount(AccountType type) {
-        this(type, 50);
+    protected BankAccount(AccountType type) {
+        this(type, 0);
     }
 
     //  no setters!
@@ -38,7 +43,7 @@ public final class BankAccount {
         return type;
     }
 
-    public int getId() {
+    public long getId() {
         //  id is already declared final;
         return id;
     }
@@ -49,20 +54,20 @@ public final class BankAccount {
         return balancyCopy;
     }
 
-    //todo should it be public? 
     public Map<Long, TransactionDTO> getTransactions() {
-        //todo return a DEEP copy!
+        //todo return a DEEP copy! 
+        //  should it be public?
         return transactions;
     }
 
     @Override
     public String toString() {
-        String s = "[%d] %s Balance = %.2f$".formatted(id, type, this.getBalance());
+        String s = "[%d] %-12s Balance = %.2f$".formatted(id, type, this.getBalance());
         return s;
     }
 
 
-    public final boolean deposit(double amount) {
+    final boolean deposit(double amount) {
 
         if (amount < 0) {return false;}
 
@@ -71,20 +76,46 @@ public final class BankAccount {
 
     }
 
-    public final boolean withdraw(double amount) {
+    final boolean withdraw(double amount) {
 
-        if (amount < 0) {return false;}
-        if (amount > this.getBalance()) {return false;}
+        double abs = Math.abs(amount);
+
+        if (abs > this.getBalance()) {return false;}
         if (this.type != AccountType.CHECKING) {return false;}
 
-        this.balance = balance - amount;
+        this.balance = balance - abs;
         return true;
 
     }
 
-    public boolean commitTransaction(int routingNumber, long transactionID, String customerID, double amount) {
-        //todo
-        return false;
+    //  negative amount is withdrawal;
+    //  positive amount is deposit;
+    //  don't let balance go < 0 !!!!
+    boolean commitTransaction(int routingNumber, long transactionID, String customerID, double amount) {
+        
+        boolean validTransaction = amount < 0 ? withdraw(amount) : deposit(amount);
+
+        if (validTransaction) {
+            TransactionDTO t = new TransactionDTO(routingNumber, customerID, transactionID, amount);
+            transactions.put(transactionID, t);    
+        }
+        
+        return validTransaction;
+    }
+
+    public void printTransactions() {
+
+        //  because TransactionDTO has no date field;
+        //  we will print transactions by insertion order (LinkedHashSet);
+        //  reversed (most recent first)
+
+        List<TransactionDTO> transactionList = new ArrayList<>(transactions.values());
+        Collections.reverse(transactionList);
+
+        System.out.println("-".repeat(60));
+        System.out.println(this.toString());
+        transactionList.forEach((v) -> System.out.println(v));
+        System.out.println("-".repeat(60));
     }
 
 

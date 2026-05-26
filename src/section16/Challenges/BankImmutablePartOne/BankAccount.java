@@ -2,7 +2,7 @@ package section16.Challenges.BankImmutablePartOne;
 
 public final class BankAccount {
 
-    enum AccountType {
+    public enum AccountType {
         CHECKING,
         SAVINGS,
         BUSINESS

@@ -6,23 +6,22 @@ import java.util.List;
 
 import section16.Challenges.BankImmutablePartTwo.BankAccount.AccountType;
 
-//todo  code in other classes cannot instantiate BankCostumer
-public class BankCustomer {
+public final class BankCustomer {
     
     //  name;
     //  id;
     //  collection<BankAccount>;
     private final String name;
-    //todo customerId should be a 15 digit string
-    private static int idInitializer = 999_999_999;
-    private final int id;
+    //  customerId should be a 15 digit string
+    private static long idInitializer = 100_000_000_000_001l;
+    private final String id;
     //  should this be final?
     //  it CAN be final, because we will modify elements, the instance itself will remain the same;
     private final List<BankAccount> accounts;
 
-    public BankCustomer(String name) {
+    private BankCustomer(String name) {
         this.name = name;
-        this.id = idInitializer++;
+        this.id = "" + idInitializer++;
         //  acounts don't need a defensive copy;
         //  because they are initilized locally, not through an external arg;
         this.accounts = new ArrayList<>();
@@ -31,18 +30,50 @@ public class BankCustomer {
         // this.accounts = new ArrayList<>(collectionArg);
     }
 
+    //  code in other classes cannot instantiate BankCostumer!
+    //  customer factory method;
+    //  will instantiate a new customer if, and only if, he opens a cheking or savings account;
+    static final BankCustomer newCustomer(String name, double checkingInitialDeposit, double savingsInitialDeposit) {
+        if (checkingInitialDeposit < 0 || savingsInitialDeposit < 0) {return null;}
+
+        BankAccount checking = null;
+        BankAccount savings = null;
+
+        if (checkingInitialDeposit > 0) {
+            checking = new BankAccount(AccountType.CHECKING, checkingInitialDeposit);
+        }
+
+        if (savingsInitialDeposit > 0) {
+            savings = new BankAccount(AccountType.SAVINGS, savingsInitialDeposit);
+        }
+
+        if (checking != null || savings != null) {
+            BankCustomer customer = new BankCustomer(name);
+            if (checking != null) {
+                customer.addAccount(checking);
+            }
+            if (savings != null) {
+                customer.addAccount(savings);
+            }
+            return customer;
+        }
+
+        return null;
+    }
+
     public String getName() {
         //  string is already immutable;
         return name;
     }
 
-    public int getId() {
+    public String getId() {
         //  id is already final;
         return id;
     }
 
     public List<BankAccount> getAccounts() {
         //todo how safe is this?
+        //  should be public?
         List<BankAccount> accountsCopy = List.copyOf(accounts);
         return accountsCopy;
     }
@@ -52,11 +83,11 @@ public class BankCustomer {
         String[] accountStrings = new String[accounts.size()];
         Arrays.setAll(accountStrings, i -> accounts.get(i).toString());
 
-        String s = "Customer: %-20s (id:%015d)%n\t%s".formatted(name, id, String.join("\n\t", accountStrings));
+        String s = "Customer: %-20s (id:%s)%n\t%s".formatted(name, id, String.join("\n\t", accountStrings));
         return s;
     }
     
-    public final boolean addAccount(BankAccount account) {
+    final boolean addAccount(BankAccount account) {
         if (account == null) {return false;}
 
         this.accounts.add(account);
@@ -65,8 +96,14 @@ public class BankCustomer {
 
     //todo
     //should it be final?
+    //should we return a copy of the account?
     //assume customers have only 1 account per accountType (e.g. 1 checking, 1 savings, 1 business)
     public BankAccount getAccount(AccountType type) {
+        for (BankAccount account : accounts) {
+            if (account.getType() == type) {
+                return account;
+            }
+        }
         return null;
     }
 

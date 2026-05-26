@@ -6,17 +6,70 @@ package section16.Challenges.BankImmutablePartTwo;
     //  Because of two way communication, it needs getters and setters!
     //  It also usually features an all args constructor for ease of use;
 
-public class TransactionDTO {
+final class TransactionDTO {
     
-    //todo handle modifiers
-    int routingNumber;
-    int customerId;
-    long transactionId;
-    double transactionAmount;
+    //  Do NOT initialize IDs in a DTO!!!
+    // private static long idInitializer = 100_000_000_000_001l;
+    //  Why?
+    //          IDs RESET when the app restarts;
+    //          not thread-safe;
+    //          collisions possible across machines/users;
+    //          DTO now contains BUSINESS LOGIC/STATE!!!
+    //          databases usually generate IDs themselves;
+
+    //  routingNumber is the ID for the Bank;
+    private int routingNumber;
+    private String customerId;
+    private long transactionId;
+    private double transactionAmount;
 
     //allArgs constructor
+    //  are defensive copies necessary?
+    //          all fields are PRIMITIVES;
+    //          like String, they are IMMUTABLE!
+    //  so the answer here is NO!
+    //  the same is true for SETTERS and GETTERS!
+    TransactionDTO(int routingNumber, String customerId, long transactionId, double transactionAmount) {
+        this.routingNumber = routingNumber;
+        this.customerId = customerId;
+        this.transactionId = transactionId;
+        this.transactionAmount = transactionAmount;
+    }
+
     //setters
+    void setRoutingNumber(int routingNumber) {
+        this.routingNumber = routingNumber;
+    }
+    void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+    void setTransactionId(long transactionId) {
+        this.transactionId = transactionId;
+    }
+    void setTransactionAmount(double transactionAmount) {
+        this.transactionAmount = transactionAmount;
+    }
+
     //getters
+    int getRoutingNumber() {
+        return routingNumber;
+    }
+    String getCustomerId() {
+        return customerId;
+    }
+    long getTransactionId() {
+        return transactionId;
+    }
+    double getTransactionAmount() {
+        return transactionAmount;
+    }
+
+    // @Override
+    // public String toString() {
+    //     return "TransactionDTO [routingNumber=" + routingNumber + ", customerId=" + customerId + ", transactionId="
+    //             + transactionId + ", transactionAmount=" + transactionAmount + "]";
+    // }
 
 
+    
 }
