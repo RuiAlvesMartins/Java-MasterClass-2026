@@ -111,7 +111,7 @@ public final class BankAccount {
         boolean validTransaction = amount < 0 ? withdraw(amount) : deposit(amount);
 
         if (validTransaction) {
-            TransactionDTO t = new TransactionDTO(routingNumber, customerID, transactionID, amount);
+            TransactionDTO t = new TransactionDTO(routingNumber, Long.parseLong(customerID), transactionID, amount);
             transactions.put(transactionID, t);    
         }
         

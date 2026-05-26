@@ -19,7 +19,7 @@ public final class TransactionDTO {
 
     //  routingNumber is the ID for the Bank;
     private int routingNumber;
-    private String customerId;
+    private long customerId;
     private long transactionId;
     private double transactionAmount;
 
@@ -29,7 +29,7 @@ public final class TransactionDTO {
     //          like String, they are IMMUTABLE!
     //  so the answer here is NO!
     //  the same is true for SETTERS and GETTERS!
-    TransactionDTO(int routingNumber, String customerId, long transactionId, double transactionAmount) {
+    TransactionDTO(int routingNumber, long customerId, long transactionId, double transactionAmount) {
         this.routingNumber = routingNumber;
         this.customerId = customerId;
         this.transactionId = transactionId;
@@ -48,7 +48,7 @@ public final class TransactionDTO {
     void setRoutingNumber(int routingNumber) {
         this.routingNumber = routingNumber;
     }
-    void setCustomerId(String customerId) {
+    void setCustomerId(long customerId) {
         this.customerId = customerId;
     }
     void setTransactionId(long transactionId) {
@@ -62,7 +62,7 @@ public final class TransactionDTO {
     public int getRoutingNumber() {
         return routingNumber;
     }
-    public String getCustomerId() {
+    public long getCustomerId() {
         return customerId;
     }
     public long getTransactionId() {
