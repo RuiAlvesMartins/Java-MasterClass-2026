@@ -2,7 +2,7 @@ package section16.Challenges.GameConsole;
 
 public interface Player {
     
-    //todo modifiers
     abstract String name();
+    // abstract boolean equals(Object o);    
 
 }
