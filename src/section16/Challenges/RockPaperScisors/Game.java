@@ -7,7 +7,7 @@ import section16.Challenges.GameConsole.GameAction;
 
 enum GameMoves {
     ROCK,
-    PAPPER,
+    PAPER,
     SCISORS
 }
 
@@ -27,8 +27,8 @@ public class Game extends section16.Challenges.GameConsole.Game<section16.Challe
         return false;
     }
 
-    private boolean drawPapper(int playerIndex) {
-        System.out.println("You draw... Papper");
+    private boolean drawPaper(int playerIndex) {
+        System.out.println("You draw... Paper");
         return false;
     }
 
@@ -47,7 +47,7 @@ public class Game extends section16.Challenges.GameConsole.Game<section16.Challe
         
         var map = new LinkedHashMap<>(Map.of(
             'R', new GameAction('R', "Draw Rock", i -> this.drawRock(i)),
-            'P', new GameAction('P', "Draw Papper", this::drawPapper),
+            'P', new GameAction('P', "Draw Paper", this::drawPaper),
             'S', new GameAction('S', "Draw Scisors", this::drawScisors)
         ));
 

@@ -2,7 +2,6 @@ package section16.Challenges.GameConsole;
 
 import java.util.function.Predicate;
 
-//todo? 
 public record GameAction(char key, String prompt, Predicate<Integer> action) {
     
     //  key: button user must press to select the action;

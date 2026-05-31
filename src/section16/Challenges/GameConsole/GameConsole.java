@@ -28,6 +28,7 @@ public class GameConsole <T extends Game<? extends Player>> {
         String playerName = scn.nextLine();
 
         int result = this.game.addPlayer(playerName);
+        System.out.println();
         System.out.println("Wellcome to %s, %s!".formatted(this.game.getGameName(), playerName));
         return result;
     }
@@ -36,18 +37,20 @@ public class GameConsole <T extends Game<? extends Player>> {
         boolean exit = false;
         while (!exit) {
             
-            var gameOptions = this.game.getGameActions(playerIndex);
             System.out.println();
             System.out.println("-".repeat(90));
-            System.out.println("Pick an option:");
+            var gameOptions = this.game.getGameActions(playerIndex);
+            System.out.println("What to do? Pick an option:");
+            System.out.println();
 
             //  display all available game options
             for (var option : gameOptions.values()) {
-                System.out.println("%s (%s)".formatted(option.prompt(), option.key()));
+                System.out.println("\t %s (%s)".formatted(option.prompt(), option.key()));
             }
 
             //  solicit user input in a while loop
-            System.out.println("What to do? Choose: ");
+            System.out.println();
+            System.out.print("Choose: ");
             char input = scn.nextLine().toUpperCase().charAt(0);
             System.out.println();
 
