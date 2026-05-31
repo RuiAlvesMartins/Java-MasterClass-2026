@@ -293,7 +293,7 @@ public class Game extends section16.Challenges.GameConsole.Game<Pirate> {
         }
 
         this.getPlayer(playerIndex).setCurrentLocation(next);
-        this.getPlayer(playerIndex).addVisitedTown(next.getChapter());
+        this.getPlayer(playerIndex).addVisitedTown(next.getChapter()) ;
 
         return false;
 
