@@ -2,7 +2,7 @@ package section16.Challenges.GameConsole;
 
 import java.util.Scanner;
 
-public class GameConsole <T extends Game<? extends Player>> {
+public final class GameConsole <T extends Game<? extends Player>> {
     
     //  Game Console is to be a container for execution of scanner code;
     //  Driving a text base game;

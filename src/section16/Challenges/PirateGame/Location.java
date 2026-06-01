@@ -1,4 +1,4 @@
-package section16.Challenges.PirateInvasion;
+package section16.Challenges.PirateGame;
 
 import java.util.HashMap;
 import java.util.HashSet;

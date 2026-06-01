@@ -1,4 +1,4 @@
-package section16.Challenges.PirateInvasion;
+package section16.Challenges.PirateGame;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,12 +54,43 @@ public class Pirate implements section16.Challenges.GameConsole.Player {
         this.currentWeapon = weapon;
     }
 
-    public void addVisitedTown(Chapter chapter) {
+    void addVisitedTown(Chapter chapter) {
         this.townsVisited.add(chapter);
     }
     
-    public Set<Chapter> getTownsVisited() {
+    Set<Chapter> getTownsVisited() {
         return townsVisited;
+    }
+
+    int getData(String dataField) {
+        return gameData.get(dataField);
+    }
+
+    private void setData(String dataField, int value) {
+        gameData.put(dataField, value);
+    }
+
+    private void adjustValue(String dataField, int value) {
+        gameData.compute(dataField, (k, v) -> v += value);
+    }
+
+    private void adjustHealth(int value) {
+        int health = getData("HP");
+        health += value;
+        health = health < 0 ? 0 : health > 100 ? 100 : health;
+        setData("HP", health);
+    }
+
+    boolean useWeapon() {
+        return false;
+    }
+
+    boolean visitTown(Chapter place) {
+        if (place != null) {
+            townsVisited.add(place);
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Main {
         // int playerIndex = console.addPlayer();
         // console.playGame(playerIndex);
 
-        var consoleTreasureIsland = new GameConsole<>(new section16.Challenges.PirateInvasion.Game("Ostrov Sokrovishch"));
+        var consoleTreasureIsland = new GameConsole<>(new section16.Challenges.PirateGame.Game("Ostrov Sokrovishch"));
         int playerIndex = consoleTreasureIsland.addPlayer();
         consoleTreasureIsland.playGame(playerIndex);
 
