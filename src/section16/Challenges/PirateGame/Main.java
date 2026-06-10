@@ -40,7 +40,6 @@ public class Main {
         System.out.println(g.levelMap.get(0).get(0).getName());
 
 
-
     }
 
 }

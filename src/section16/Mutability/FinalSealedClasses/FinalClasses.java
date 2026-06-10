@@ -4,7 +4,6 @@ import section16.Challenges.GameConsole.Game;
 import section16.Challenges.GameConsole.GameAction;
 import section16.Challenges.GameConsole.GameConsole;
 import section16.Challenges.GameConsole.Player;
-import section16.Challenges.PirateGame.Pirate;
 import section16.Challenges.PirateGame.Weapon;
 
     //  FINAL CLASS
@@ -38,8 +37,8 @@ public final class FinalClasses {
     public static void main(String[] args) {
         
     //  SpecialGameConsole is extending a final class, hence the error;
-    //     SpecialGameConsole<section16.Challenges.PirateGame.Game> game = 
-    //         new SpecialGameConsole<>(new section16.Challenges.PirateGame.Game("Treasure Island")); 
+        // SpecialGameConsole<section16.Challenges.PirateGame.Game> game = 
+        //     new SpecialGameConsole<>(new section16.Challenges.PirateGame.Game("Treasure Island")); 
 
     //  Tip: Making CONSTRUCTORS PACKAGE-PRIVATE is the same as making a class FINAL;
     //  (because subclasses cannot reach and chain parent constructor to their own)

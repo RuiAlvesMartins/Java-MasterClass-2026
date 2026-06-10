@@ -1,0 +1,13 @@
+lots of stuff!!!!
+
+
+combatant abstract -> player -> npc
+
+make loot an ENUM; implement logic on the enum
+
+fix the cartrige count problem: make an inventory system
+
+make Location a record
+
+
+combatant will need a boolean flag isPlayableCharacter
