@@ -14,7 +14,7 @@ public abstract class Game <T extends Player> {
     public abstract T createNewPlayer(String name);
     public abstract Map<Character, GameAction> getGameActions(int playerIndex);
 
-    //todo include getter and helper methods as appropriate
+    //DONE include getter and helper methods as appropriate
     protected Game(String gameName) {
         this.gameName = gameName;
     }
@@ -22,11 +22,11 @@ public abstract class Game <T extends Player> {
         return gameName;
     }
     public List<T> getPlayers() {
-        //todo defensive copy
+        //todo defensive copy?
         return players;
     }
     public Map<Character, GameAction> getStandardActions() {
-        //todo defensive copy
+        //todo defensive copy?
         if (standardActions == null) {
             standardActions = new LinkedHashMap<>(Map.of(
                 'I', new GameAction('I', "Print Player Info", i -> this.printPlayer(i)),

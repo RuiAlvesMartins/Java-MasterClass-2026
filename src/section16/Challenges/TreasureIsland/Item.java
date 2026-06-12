@@ -7,6 +7,7 @@ enum Item {
     AMMO("Ammo Box"),
     CARTRIDGE_BOX("Cartridge Box"),
     CARTRIDGE_CRATE("Cartridge Crate"),
+    MAP("Captain Flint's Map"),
     TREASURE("Captain Flint's Treasure");
 
     private final String name;

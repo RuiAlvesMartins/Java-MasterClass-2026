@@ -1,13 +1,11 @@
 lots of stuff!!!!
+    implement combat
+    implement a story progression system
+    randomize loot distribution
+    implement XP
 
 
 combatant abstract -> player -> npc
 
-make loot an ENUM; implement logic on the enum
 
-fix the cartrige count problem: make an inventory system
-
-make Location a record
-
-
-combatant will need a boolean flag isPlayableCharacter
+????combatant will need a boolean flag isPlayableCharacter

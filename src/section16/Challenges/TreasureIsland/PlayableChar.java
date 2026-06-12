@@ -8,7 +8,6 @@ import java.util.Set;
 final class PlayableChar extends Combatant {
 
     private final Set<Chapter> townsVisited;
-    //todo add an inventoryc
     private final Map<Item, Integer> inventory;
 
     {

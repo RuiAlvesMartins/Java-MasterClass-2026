@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Pirate implements section16.Challenges.GameConsole.Player {
     
-    //todo combat
+    //  implement combat?
     private final String name;    
     private final Map<String, Integer> gameData;
     private final Set<Chapter> townsVisited;

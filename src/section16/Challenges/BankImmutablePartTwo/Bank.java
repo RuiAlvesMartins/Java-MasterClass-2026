@@ -37,7 +37,6 @@ public class Bank {
         return customersCopy;
     }
     
-    //todo
     //  it CANNOT return a COPY!
     public BankCustomer getCustomer(String id) {
         // if (customers.get(id) != null) {

@@ -108,7 +108,6 @@ public final class BankCustomer {
         return true;
     }
 
-    //todo
     //assume customers have only 1 account per accountType (e.g. 1 checking, 1 savings, 1 business)
     //  this has to return an original instance, instead of a copy, for use in Bank.java;
     //  it CANNOT return a COPY!

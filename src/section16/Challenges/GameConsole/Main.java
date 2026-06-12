@@ -2,9 +2,9 @@ package section16.Challenges.GameConsole;
 
 public class Main {
     
-    //todo create simple game
-    //todo create simple player
-    //todo test the console with the simple game
+    //DONE create simple game
+    //DONE create simple player
+    //DONE test the console with the simple game
 
     public static void main(String[] args) {
 
@@ -20,5 +20,8 @@ public class Main {
         int playerIndex = consoleTreasureIsland.addPlayer();
         consoleTreasureIsland.playGame(playerIndex);
     }
+
+    //foto marinha japonese no canto a preto e branco
+    //legenda em portugues
 
 }
