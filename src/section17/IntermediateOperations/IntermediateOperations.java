@@ -1,4 +1,4 @@
-package section17.Basics.IntermediateOperations;
+package section17.IntermediateOperations;
 
 import java.util.Comparator;
 import java.util.Random;

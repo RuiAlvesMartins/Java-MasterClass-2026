@@ -1,4 +1,4 @@
-package section17.Basics.Sources;
+package section17.Sources;
 
 import java.util.Arrays;
 import java.util.Comparator;

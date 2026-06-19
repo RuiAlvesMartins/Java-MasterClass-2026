@@ -1,4 +1,4 @@
-package section17.Basics.TerminalOperations;
+package section17.TerminalOperations;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -132,6 +132,11 @@ public class TerminalOperations {
 
 
 
+
+
+        //  reduction operations
+        //  Optional
+        //  Collectior Interface
     }
 
 }

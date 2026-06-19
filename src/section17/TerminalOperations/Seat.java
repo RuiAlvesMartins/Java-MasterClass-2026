@@ -1,4 +1,4 @@
-package section17.Basics.TerminalOperations;
+package section17.TerminalOperations;
 
 import java.util.Random;
 

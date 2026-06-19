@@ -1,4 +1,4 @@
-package section17.Basics.IntermediateOperations;
+package section17.IntermediateOperations;
 
 public record Seat(char rowMarker, int seatNumber, double price) {
 
