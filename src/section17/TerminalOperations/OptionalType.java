@@ -14,7 +14,7 @@ public class OptionalType {
     
     //  OPTIONAL
     //  Optional is a GENERIC CLASS;
-    //  It's purpose is to serve as a CONTAINER for a value that MAY or may not be NULL;
+    //  It's purpose is to serve as a CONTAINER (or WRAPPER) for a value that MAY or may not be NULL;
     //  Designed to adress the NULLPOINTERException, intended to be a RETURN type; 
 
     //  Optional tries to adress the problem of no result/data being a valid situation;

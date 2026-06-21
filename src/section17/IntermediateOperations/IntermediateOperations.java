@@ -7,6 +7,61 @@ import java.util.stream.Stream;
 
 public class IntermediateOperations {
     
+    //  .LIMIT()
+    //  defines the exact size of the stream (n elements);
+    
+    //  .DISTINCT()
+    //  removes duplicate values from the stream;
+    
+    //  .SKIP()
+    //  will skip the first n elements;
+    
+    
+    
+    //  .MAP()
+    //  will apply a function to all elements of a stream;
+    //  return type may be different! this transforms the Stream<Type>;
+    
+    //  .PEEK()
+    //  like map, it applies a function (Consumer) to all elements of a stream;
+    //  unlike map, it cannot change the return type, i.e. it is not allowed to transform the stream!
+    //  useful for debuging purposes;
+    
+    
+    
+    //  .SORTED()
+    //  sorts elements by Natural Order;
+    //  elements must implement Comparable!
+    
+    //  .SORTED() (comparator)
+    //  sorts elements by Comparator;
+    
+    
+    
+    //  .FILTER()
+    //  element kept IF predicate true;
+    
+    //  .TAKEWHILE()
+    //  element kept WHILE predicate true;
+    //  when predicate becomes false for the first time, 
+    //  condition is no longer cheked and elements are no longer kept!
+    
+    //  .DROPWHILE()
+    //  element removed WHILE predicate true;
+    //  when predicate becomes false for the first time, 
+    //  condition is no longer cheked and elements are no longer droped!
+    
+    //  .dropWhile() and .takeWhile() can be effectively paired to retrieve a specific range of elements!
+    //  (this is true for ORDERED streams; in non-ordered streams result will be non-deterministic);
+
+
+
+    //  .mapToInt(), .mapToLong() and .mapToDouble() return IntStream, LongStream and DoubleStream, respectively;
+    //  .mapToObj():    returns Stream<Object>  (reference type is infered implicitly from Object);
+    //  .boxed():       returns a WRAPPER reference type;
+
+
+    
     public static void main(String[] args) {
         
         //  Java API developers designed Streams to allow the processing of data in a DECLARATIVE manner, like SQL;
@@ -59,55 +114,6 @@ public class IntermediateOperations {
         //  Alternatively, streams can be transformed back into reference types, but only through:
         //          .mapToObj():    returns Stream<Object>  (reference type is infered implicitly from Object);
         //          .boxed():       returns a WRAPPER reference type;
-
-
-
-        //  .LIMIT()
-        //  defines the exact size of the stream (n elements);
-
-        //  .DISTINCT()
-        //  removes duplicate values from the stream;
-
-        //  .SKIP()
-        //  will skip the first n elements;
-
-
-
-        //  .MAP()
-        //  will apply a function to all elements of a stream;
-        //  return type may be different! this transforms the Stream<Type>;
-
-        //  .PEEK()
-        //  like map, it applies a function (Consumer) to all elements of a stream;
-        //  unlike map, it cannot change the return type, i.e. it is not allowed to transform the stream!
-        //  useful for debuging purposes;
-
-
-
-        //  .SORTED()
-        //  sorts elements by Natural Order;
-        //  elements must implement Comparable!
-
-        //  .SORTED() (comparator)
-        //  sorts elements by Comparator;
-
-
-
-        //  .FILTER()
-        //  element kept IF predicate true;
-
-        //  .TAKEWHILE()
-        //  element kept WHILE predicate true;
-        //  when predicate becomes false for the first time, 
-        //  condition is no longer cheked and elements are no longer kept!
-
-        //  .DROPWHILE()
-        //  element removed WHILE predicate true;
-        //  when predicate becomes false for the first time, 
-        //  condition is no longer cheked and elements are no longer droped!
-
-        //  .dropWhile() and .takeWhile() can be effectively paired to retrieve a specific range of elements!
-        //  (this is true for ORDERED streams; in non-ordered streams result will be non-deterministic);
 
     }
 

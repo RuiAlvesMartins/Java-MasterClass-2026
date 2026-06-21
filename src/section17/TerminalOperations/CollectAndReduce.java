@@ -25,7 +25,8 @@ public class CollectAndReduce {
 
         //  .REDUCE()
         //  elements are accumulated into a SINGLE TYPE;
-        //          .reduce(identity, accumulator)
+        //          .reduce(identity, accumulator)      returns an identity type parameter;
+        //          .reduce(acumulator)                 returns an Optional;        
 
 
     public static void main(String[] args) {
@@ -79,6 +80,7 @@ public class CollectAndReduce {
 
 
         //  .reduce(identity, accumulator)
+        //  returns the type specified by the identity parameter;
         String countryList = students.stream()
                 .map(Student::getCountryCode)
                 .distinct()
@@ -86,6 +88,19 @@ public class CollectAndReduce {
                 .reduce("", (r, v) -> r + " " + v);
         System.out.println("countryList = " + countryList);
         //  in this example, elements are reduced to a single string type;
+
+        //  .reduce(accumulator)
+        //  returns an Optional;
+        students.stream()
+                .filter(s -> s.getAge() <= 21)
+                .map(Student::getCountryCode)
+                .distinct()
+                .reduce((a, b) -> String.join(", ", a, b))
+                .ifPresentOrElse(
+                        System.out::println, 
+                        () -> System.out.println("None found")
+                );
+        ;
 
     }
 

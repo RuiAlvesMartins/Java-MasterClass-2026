@@ -1,7 +1,9 @@
 package section17.Challenges.StudentEngagement;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -105,16 +107,25 @@ public class Student {
     }
     public static Student getRandomStudent(Course... courses) {
         int maxYear = LocalDate.now().getYear() + 1;
+
+        List<Course> enrolledCourses = new ArrayList<>(); 
+        for (Course course : courses) {
+            if (new Random().nextBoolean()) {
+                enrolledCourses.add(course);
+            }
+        }
+
         Student student = new Student(
                 getRandomVal("AU", "CA", "CN", "GB", "IN", "UA", "US"), 
                 random.nextInt(2015, maxYear), 
                 random.nextInt(18, 90), 
                 getRandomVal("M", "F", "T"), 
                 random.nextBoolean(), 
-                courses
+                enrolledCourses.toArray(new Course[enrolledCourses.size()])
         );
 
-        for (Course course : courses) {
+        for (Course course : enrolledCourses) {
+                
             int lecture = random.nextInt(1, course.lectureCount());
             int year = random.nextInt(student.getYearEnrolled(), maxYear);
             int month = random.nextInt(1, 13);
@@ -124,6 +135,7 @@ public class Student {
                 }
             }
             student.watchLecture(course.courseCode(), lecture, month, year);
+
         }
 
         return student;
