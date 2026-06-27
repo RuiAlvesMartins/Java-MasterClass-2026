@@ -31,6 +31,27 @@ public class BigDecimalClass {
     //  BigDecimal is IMMUTABLE!
 
 
+
+    //  Because BigDecimal is IMMUTABLE, you should re-assign the result of BigDecimal methods to a new variable!
+    //  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html#method-summary
+    //  BigDecimal METHODS:
+    //
+    //          BigDecimal.unscaledValue();
+    //          BigDecimal.precision();
+    //          BigDecimal.scale();
+    //          BigDecimal.setScale(newScale, RoundingMode);
+    //
+    //          BigDecimal.valueOf();
+    // 
+    //          BigDecimal.divide(divisor, mathContext);
+    //          BigDecimal.multiply();
+    //          (among other mathematical operations)
+    // 
+    //          BigDecimal.ZERO;
+    //          BigDecimal.ONE;
+    //          BigDecimal.TWO;
+    //          BigDecimal.TEN;
+
     public static void main(String[] args) {
         
         double policyAmount = 100_000_000;
@@ -90,7 +111,7 @@ public class BigDecimalClass {
         //  double's scale is only 16 digits long!
         //  effect: the double results are truncated
 
-        //  lesson: writing numbers as a string is more precise!
+        //  lesson: writing numbers as a STRING is more PRECISE!
         //  the scale and precision will be exactly as specified on the string!
 
 
@@ -123,8 +144,14 @@ public class BigDecimalClass {
 
 
 
-        //  MathContext
+        //  MATHCONTEXT
+        //  MathContext is a helper class for mathematical operations (like certain methods on BigDecimal);
+        //  It bounds said math operations by certain rules:
+        //          Precision;
+        //          RoundingMode;
+        //  These are applied to the result of the operation;
         System.out.println();
+
         //  MathContext.UNLIMITED is the default RoundingMode, and can still throw an ArithmeticException
         // BigDecimal percent = BigDecimal.ONE.divide(BigDecimal.valueOf(beneficiaries), MathContext.UNLIMITED);
 
@@ -132,7 +159,7 @@ public class BigDecimalClass {
         BigDecimal percent = BigDecimal.ONE.divide(BigDecimal.valueOf(beneficiaries), MathContext.DECIMAL32);
         System.out.println(percent);
 
-        //  MathContext.DECIMAL64 returns 16 decimal digits:
+        //  MathContext.DECIMAL64 returns 16 decimal digits, like a DOUBLE:
         percent = BigDecimal.ONE.divide(BigDecimal.valueOf(beneficiaries), MathContext.DECIMAL64);
         System.out.println(percent);
 
@@ -147,8 +174,13 @@ public class BigDecimalClass {
 
 
         BigDecimal checkAmount = policyPayout.multiply(percent);
-        System.out.println("%.2f".formatted(checkAmount));
+        System.out.println("policyPayout = %.2f".formatted(policyAmount));
+        System.out.println("percent = %.2f".formatted(percent));
+        System.out.println("checkAmount = %.2f".formatted(checkAmount));
         System.out.println();
+
+        //  for a multipliplication, the default scale is the sum of scales of both operands;
+        //  here we will reset it to 2:
         checkAmount = checkAmount.setScale(2, RoundingMode.HALF_UP);
         System.out.println("%-14s %-15s %-8s %s".formatted("Value", "Unscaled Value", "Scale", "Precision"));
         System.out.println("%-15s %-15d %-8d %d"
