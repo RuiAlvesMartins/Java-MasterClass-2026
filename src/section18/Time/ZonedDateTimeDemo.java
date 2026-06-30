@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.TemporalAdjusters;
 
-public class ZoneDateTimeDemo {
+public class ZonedDateTimeDemo {
 
     //  java.time.ZONEDATETIME
     //  similar to a LocalDateTime, but with a Time Zone associated;
